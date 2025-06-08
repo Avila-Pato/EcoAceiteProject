@@ -1,0 +1,80 @@
+/* :root {
+  background-color: rgb(27, 27, 27);
+  color: white;
+} */
+
+/* No tocar aqui este es el register y el login Principal  */
+  
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+:root {
+  --color-primary-start: #1b5e20;
+  --color-primary-end: #4caf50;
+  --color-primary-hover-start: #388e3c;
+  --color-primary-hover-end: #81c784;
+  --color-secondary: #e8f5e9;
+  --color-secondary-border: #388e3c;
+  --color-secondary-hover-bg: #c8e6c9;
+  --color-secondary-hover-text: #2e7d32;
+  --radius: 0.75rem;
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-light: rgba(27, 94, 32, 0.25);
+  --shadow-card: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+/* Reset & base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.h1-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.buttons-container{
+  gap: 1rem;
+  display: flex;
+}
+
+/* Estilos base para los botones */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+  
+}
+
+/* Estilo específico para el botón de login */
+.btn-login {
+  background: linear-gradient(to right, var(--color-primary-start), var(--color-primary-end));
+  color: white;
+  border: none;
+  box-shadow: 0 4px 6px var(--shadow-light);
+}
+
+.btn-login:hover {
+  background: linear-gradient(to right, var(--color-primary-hover-start), var(--color-primary-hover-end));
+  transform: translateY(-2px);
+}
+
+/* Estilo específico para el botón de registro */
+.btn-register {
+  background: var(--color-secondary);
+  color: var(--color-secondary-border);
+  border: 2px solid var(--color-secondary-border);
+}
