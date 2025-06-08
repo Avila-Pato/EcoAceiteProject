@@ -29,9 +29,7 @@ function AuthPage() {
                     <path d="M12 2C12 2 7 10 7 14a5 5 0 0 0 10 0c0-4-5-12-5-12z" />
                   </svg>
                   <div className="recycle-badge">
-                    <svg className="recycle-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                      <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                    </svg>
+                    😄
                   </div>
                 </div>
               </div>

@@ -1,12 +1,57 @@
-# React + Vite
+# 🌿 EcoAceite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+¡Hola equipo! 👋  
+Bienvenidos/as al proyecto **EcoAceite**.  
+Este es nuestro primer proyecto colaborativo, así que si nunca has usado Git o GitHub, ¡no te preocupes! Aquí te explico TODO paso a paso para que puedas trabajar con nosotros sin problemas.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Requisitos Previos
 
-## Expanding the ESLint configuration
+Antes de comenzar, asegúrate de tener instalado lo siguiente en tu computadora:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [Node.js](https://nodejs.org) – Para gestionar dependencias y ejecutar scripts.
+- [Git](https://git-scm.com) – Para clonar el repositorio y manejar el control de versiones.
+- [Visual Studio Code](https://code.visualstudio.com) (opcional pero recomendado) – Editor de código.
+
+---
+
+## 🚀 ¿Cómo empezar a trabajar?
+
+### PASO 1: Clonar el repositorio
+
+Abre la terminal o Git Bash y ejecuta:
+
+```bash
+git clone https://github.com/Avila-Pato/EcoAceiteProject.git
+cd EcoAceiteProject
+PASO 2: Cambiar a la rama de desarrollo
+Usamos una rama de trabajo llamada dev, así que ejecuta:
+
+bash
+Copiar
+Editar
+git checkout dev
+PASO 3: Instalar las dependencias
+bash
+Copiar
+Editar
+npm install
+👨‍💻 ¿Cómo trabajar y subir tus cambios?
+PASO 1: Crear una nueva rama
+Antes de hacer cambios, crea una nueva rama con tu nombre y lo que vas a trabajar. Por ejemplo:
+
+bash
+Copiar
+Editar
+git checkout -b mi-nueva-rama
+PASO 2: Hacer tus cambios
+Abre el proyecto con Visual Studio Code y edita lo que necesites.
+
+PASO 3: Subir tus cambios
+bash
+Copiar
+Editar
+git add .
+git commit -m "Descripción de tus cambios"
+git push origin mi-nueva-rama
