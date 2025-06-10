@@ -1,25 +1,130 @@
 import Navbar from "../components/navbar";
-import fondo from "../assets/fondo.png" // Import your background image
-
+import fondo2 from "../assets/fondo2.jpg"; // Import your background image
+import oil from "../assets/oil.jpg"; // Import your vector image
 
 const HomePage = () => {
   return (
     <>
-    <main>
-         <div className="background-image-home"> 
-                <img src={fondo} alt="fondo imagen"   /> 
-              </div>
-      <header>
-        <div>
-          <Navbar />
+      <main className="main-page">
+        <div className="background-image-home">
+          <img src={fondo2} alt="fondo imagen" />
         </div>
-      </header>
-      <section className="home-page" style={{ marginLeft: "30px", marginTop: "30px", maxWidth: "1300px", 
-       marginInline: "100px", backgroundColor: "gray" }}>
-        <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, sit! Hic tempora ex fugiat dolorum adipisci sapiente maxime officia. Mollitia, cumque. Dolores illum aut laudantium voluptatum sit, explicabo aspernatur ipsa et facere animi ea odio hic consectetur eveniet dignissimos doloribus nulla autem fuga amet repudiandae saepe nemo quod error. Amet itaque at ab expedita quibusdam ratione praesentium tempore, quod cum blanditiis ipsum temporibus rem accusamus, perspiciatis nam accusantium voluptate vitae placeat eveniet? Quam fugiat officia, rerum similique ullam ea. Hic veniam delectus repellendus, quis fugit fugiat. Reiciendis inventore a quasi hic officia, cum fugit perferendis obcaecati omnis dolor expedita sunt ducimus dolores earum odio totam doloribus magni. Tempora magnam ipsam, vero libero, veniam, autem temporibus alias assumenda adipisci nisi praesentium eveniet quas esse nulla repellendus. Magnam explicabo nisi distinctio soluta rem blanditiis laboriosam, quibusdam dicta doloremque! Deleniti sed id architecto numquam consectetur aliquid ducimus ipsa eum repellat vero vel qui reprehenderit non tempora ullam ab unde, sunt praesentium laboriosam repellendus dolorum fugit? Sunt impedit animi labore doloribus, asperiores alias repellat dolores sequi eveniet ab! Voluptas delectus non repudiandae iusto. Voluptas tempora, numquam ab laboriosam in corporis voluptatibus dolorum non laudantium esse. Sit cumque sequi rerum libero. Neque labore quidem optio magni molestiae amet vitae excepturi, doloremque qui ullam ab harum quam obcaecati, quos quasi, non ex blanditiis rerum nesciunt cupiditate. Mollitia minus consectetur nostrum id, recusandae fugiat laborum est exercitationem! Quasi labore velit saepe eum! Quaerat eaque incidunt qui, quo perspiciatis sit exercitationem non hic aliquam quam rerum ullam voluptas modi corporis, fugiat possimus sunt perferendis assumenda tenetur a quibusdam iure libero veritatis accusamus. Dicta tempora commodi animi suscipit. Dignissimos, quasi? Dignissimos ducimus architecto mollitia at, ex tenetur minus? Cum non veniam quaerat, aut illum ullam hic, aperiam eius, harum dolor iste ex quod quam voluptas at excepturi. Cum excepturi architecto id quam, dolorem obcaecati iusto, eos atque laboriosam, hic deleniti ullam! Deserunt eveniet temporibus sapiente ipsam repudiandae eum hic odio ipsum molestias nemo harum dolorem obcaecati delectus, amet molestiae, atque ut nobis eaque quos minus provident sit! Itaque rerum inventore expedita vel repellendus. Velit doloribus vitae quidem dolor culpa impedit perspiciatis voluptatem quasi, aspernatur temporibus repellat fugit quas rem assumenda unde dignissimos officiis fugiat placeat exercitationem nostrum ipsum optio voluptate magni. Laboriosam porro impedit aliquam perferendis neque dolorem, nemo ad, perspiciatis minima ut velit obcaecati dolor? Blanditiis provident culpa atque laboriosam, praesentium quas sed quod, illo, distinctio velit at. Veritatis doloribus molestiae deleniti alias totam perspiciatis, voluptatibus debitis molestias nulla, dolore blanditiis facilis ratione quos et nobis, pariatur accusamus ex odio cupiditate magnam ipsum! Id, ipsa! Sequi obcaecati, illum voluptas velit recusandae sit quibusdam expedita sed facere aliquam provident natus veritatis tempora consectetur consequatur. Provident quas fuga eius doloribus dolor nam placeat odit debitis temporibus, magnam sapiente iure ad et commodi voluptate numquam rerum! Ipsam perspiciatis, velit ad deserunt facilis delectus exercitationem voluptatem laboriosam quae, blanditiis dolores cum? Dolores nisi laborum omnis aliquam, placeat perspiciatis obcaecati tempore unde minima porro? Odit, quasi maiores magnam vitae, laudantium error ad autem totam deleniti perferendis qui! Laboriosam labore qui excepturi sint magni error eos voluptatibus earum, rem harum, ipsa perspiciatis ut quisquam inventore vitae fuga nam ab repellendus dicta minima aliquid? Quam quia eos quaerat placeat tenetur nesciunt iste suscipit illo possimus porro itaque minus, odio eligendi laudantium explicabo aliquid. Assumenda modi enim illo quisquam doloremque. Qui totam aperiam est ipsa consectetur suscipit cum! Illo ex, et sapiente aliquid mollitia sunt iure quis. Labore facilis aspernatur alias delectus quo eaque sit culpa, iusto itaque fugit ratione veniam, adipisci ad beatae? Ipsam dolore, possimus ab cupiditate mollitia nisi veniam voluptates consequatur nulla voluptate, porro reiciendis deleniti vitae corrupti in doloremque? Explicabo, atque! Qui necessitatibus, cupiditate debitis cumque voluptatum eum possimus aliquam, aliquid quisquam, dicta in vel dolore. Suscipit laborum expedita nostrum beatae. Debitis, dolor! Corporis repellendus magnam, voluptatum reiciendis ex corrupti odio doloribus! Neque aspernatur commodi quo, iusto, quos sapiente, deleniti nostrum itaque voluptatem ipsam fuga. Praesentium, fugit. Hic, quasi praesentium. Excepturi, aspernatur distinctio assumenda quam odio consequatur laborum voluptatibus placeat tenetur. Dolores placeat neque exercitationem. Harum, assumenda at possimus neque nulla eveniet alias dolorum aliquid beatae, veritatis ducimus labore perferendis ex. Earum asperiores optio reprehenderit sunt, eaque, iusto voluptatem maxime possimus nulla excepturi explicabo soluta aliquid voluptates minus? Laudantium fugit enim deleniti voluptates ipsam nihil et. Maiores eos doloribus quia, eum ratione id esse? Id libero est similique ad eligendi consectetur, odio harum, distinctio nisi, dolore omnis na nobis laudantium est possimus, optio exercitationem nam distinctio. Officiis facere nostrum quia, sint delectus accusamus voluptates minima, iste cum natus esse possimus fuga distinctio? Ratione, ipsam numquam? iure obcaecati ratione sunt fuga rem.</h1>
-      </section>
-    </main>
-     </>
+        <header>
+          <div>
+            <Navbar />
+          </div>
+        </header>
+        
+        <section
+          className="home-page"
+          style={{
+            position: "relative",
+            marginRight: "50px",
+            marginLeft: "50px",
+            marginTop: "10px",
+            maxWidth: "1400px",
+
+            marginInline: "20px",
+            backgroundColor: "rgba(355, 355, 355",
+            padding: "20px",
+            borderRadius: "10px",
+          }}
+        >
+          <div style={{ display: "flex", flexDirection: "row" }}>
+              <div style={{display: "flex", flexDirection:"column", justifyContent: 'center', textAlign: "center",marginLeft: "40px", paddingBottom: "20%",  gap: "10px" }}>
+                <h2>
+                  Explora y asegura un cupo 
+                </h2>
+                <span>Del aceite usado al cambio verde: transformando ciudades</span>
+                <button style={{borderRadius: "10px", overflow: "hidden", marginTop: "10px"}} >Explora</button>
+              </div>
+            <div
+              style={{
+                top: "20px",
+                right: "20px",
+                borderRadius: "10px",
+                overflow: "hidden",
+                marginLeft: "50px"
+              }}
+            >
+              <img src={oil} alt="fondo vector" width={800} height={500} />
+              
+            </div>
+            
+            <p
+              className="inline-p"
+              style={{
+                marginLeft: "10px",
+                borderBlockEnd: "3px solid green",
+                textAlign: "end",
+              }}
+            >
+              01
+            </p>
+          
+
+            <p className="inline-p" style={{ marginLeft: "10px" }}></p>
+            <p className="inline-p" style={{ marginLeft: "10px" }}>
+              {" "}
+            </p>
+            <div
+              style={{
+                position: "absolute",
+                right: "30px",
+                top: "70px",
+                borderRadius: "10px",
+                overflow: "hidden",
+              }}
+            >
+              <img src={oil} alt="fondo vector" width={300} height={100} />
+              
+            </div>
+
+            {/* span  */}
+            <span style={{  position: 'absolute', left: "55%", top: "30%", height: '140px',  display: 'flex', flexDirection: "column", borderRadius: "10px", overflow: 'hidden', width: '40%', backgroundColor: 
+            'rgb(240,239,230)',
+              padding: '10px'
+            }}><p style={{ fontFamily: 'cursive', fontSize: 'Large' }}>
+                Transformando el aceite usado, cuidando el planeta.<br />
+                </p>
+              <p style={{marginTop: '5px'}} >
+              Reciclar 1 litro de aceite puede evitar la contaminación de hasta 1.000 litros de agua — un acto simple con un impacto del 99.9% en la protección de nuestros recursos hídricos.</p>
+              <div style={{  display: 'flex', justifyContent: 'end' }}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-arrow-out-down-right-icon lucide-circle-arrow-out-down-right"><path d="M12 22a10 10 0 1 1 10-10"/><path d="M22 22 12 12"/><path d="M22 16v6h-6"/></svg>
+              </div>
+              </span>
+
+
+            <div
+              style={{
+                position: "absolute",
+                top: "70px",
+                left: "55%",
+                borderRadius: "10px",
+                overflow: "hidden",
+              }}
+            >
+              <img src={oil} alt="fondo vector" width={220} height={100} />
+             
+            </div>
+
+             
+          </div>
+          
+
+          <section
+            style={{
+              display: "flex",
+              textAlign: "center",
+              flexDirection: "column",
+            }}
+          >
+            <h2>Segunda seccion</h2>
+
+          </section>
+        </section>
+      </main>
+    </>
   );
 };
 

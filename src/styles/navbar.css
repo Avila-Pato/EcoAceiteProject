@@ -1,28 +1,11 @@
 
-:root {
-    --navbar-bg-color: #386144;
-    --navbar-text-color: rgba(255, 177, 50, 0.8);
-    --navbar-text-hover-color: #d4d4d4;
-}
-
 
 ul {
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: end;
     list-style: none;    
-    padding: 10px 20px;
-    background-color: var(--navbar-bg-color);
-    font-weight: 900;
     font-size: 1.2rem;
-}
-li {
-    color: var(--navbar-text-color);
-    cursor: pointer;
-    transition: color 0.3s ease;   
-} 
-li:hover {
-    color: var(--navbar-text-hover-color);
 }
