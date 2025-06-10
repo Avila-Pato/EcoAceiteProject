@@ -87,13 +87,13 @@ const HomePage = () => {
             <span style={{  position: 'absolute', left: "55%", top: "30%", height: '140px',  display: 'flex', flexDirection: "column", borderRadius: "10px", overflow: 'hidden', width: '44%', backgroundColor: 
             'rgb(240,239,230)',
               padding: '10px'
-            }}><p style={{ fontFamily: 'cursive', fontSize: 'Large' }}>
+            }}><p style={{ fontFamily: 'cursive', fontSize: 'Large', }}>
                 Transformando el aceite usado, cuidando el planeta.<br />
                 </p>
               <p style={{marginTop: '5px'}} >
               Reciclar 1 litro de aceite puede evitar la contaminación de hasta 1.000 litros de agua — un acto simple con un impacto del 99.9% en la protección de nuestros recursos hídricos.</p>
               <div style={{  display: 'flex', justifyContent: 'end' }}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-arrow-out-down-right-icon lucide-circle-arrow-out-down-right"><path d="M12 22a10 10 0 1 1 10-10"/><path d="M22 22 12 12"/><path d="M22 16v6h-6"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-circle-arrow-out-down-right-icon lucide-circle-arrow-out-down-right"><path d="M12 22a10 10 0 1 1 10-10"/><path d="M22 22 12 12"/><path d="M22 16v6h-6"/></svg>
               </div>
               </span>
 

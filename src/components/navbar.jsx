@@ -45,6 +45,7 @@ const Navbar = () => {
           justify-content: space-between;
           padding: var(--spacing) calc(var(--spacing)*2);
           box-shadow: 0 4px 12px rgba(46, 125, 50, 0.15);
+          zIndex: 50;
         }
 
         .logo {
