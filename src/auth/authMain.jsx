@@ -93,7 +93,7 @@ function AuthPage() {
                 <h2 className="auth-title">Comienza tu Viaje Verde</h2>
 
                 <div className="buttons-container">
-                  <Link to="/Login" className="btn btn-login" aria-label="Iniciar sesión">
+                  <Link to="/login" className="btn btn-login" aria-label="Iniciar sesión">
                     <div className="btn-background"></div>
                     <div className="btn-content">
                       <div className="btn-icon">

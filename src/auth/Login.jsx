@@ -3,6 +3,10 @@ const Login  = () => {
   return (
       <div className="sign-in-container">
       <SignIn
+      
+    forceRedirectUrl={`${origin}/home`}
+    fallbackRedirectUrl={`${origin}/home`}
+
       appearance={{
           elements: {
             rootBox: {
@@ -59,8 +63,7 @@ const Login  = () => {
             }
           }
         }}
-
-forceRedirectUrl={"/home"} />
+/>
     </div>
     )
  

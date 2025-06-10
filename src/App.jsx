@@ -10,10 +10,13 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<AuthPage />} />
+        {/* Login y register */}
+        <Route path="/" element={<AuthPage />} /> 
+            {/* pagina principal */}
         <Route path="/home" element={<HomePage/>} />        
+        {/* Rutas de autenticación */}
         <Route index path="/signup" element={< SignUpPage />} />
-        <Route index path="/Login" element={<Login />} />
+        <Route index path="/login" element={<Login />} />
       </Routes>
     </Router>
   );
