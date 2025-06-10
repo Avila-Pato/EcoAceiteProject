@@ -18,7 +18,7 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <AuthProvider>
     <ErrorBoundary fallback={<div>Algo ha salido mal</div>}>
-      <ClerkProvider publishableKey={PUBLISHABLE_KEY} signInForceRedirectUrl={"/home"} signUpForceRedirectUrl={"/home"} >
+      <ClerkProvider publishableKey={PUBLISHABLE_KEY}   signInForceRedirectUrl={"/home"} signUpForceRedirectUrl={"/home"}  >
         <App />
       </ClerkProvider>
     </ErrorBoundary>
