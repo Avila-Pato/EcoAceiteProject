@@ -1,6 +1,7 @@
 import Navbar from "../components/navbar";
 import fondo2 from "../assets/fondo2.jpg"; // Import your background image
 import oil from "../assets/oil.jpg"; // Import your vector image
+import persona from "../assets/personaPerfil.jpg"
 
 const HomePage = () => {
   return (
@@ -83,7 +84,7 @@ const HomePage = () => {
             </div>
 
             {/* span  */}
-            <span style={{  position: 'absolute', left: "55%", top: "30%", height: '140px',  display: 'flex', flexDirection: "column", borderRadius: "10px", overflow: 'hidden', width: '40%', backgroundColor: 
+            <span style={{  position: 'absolute', left: "55%", top: "30%", height: '140px',  display: 'flex', flexDirection: "column", borderRadius: "10px", overflow: 'hidden', width: '44%', backgroundColor: 
             'rgb(240,239,230)',
               padding: '10px'
             }}><p style={{ fontFamily: 'cursive', fontSize: 'Large' }}>
@@ -96,10 +97,17 @@ const HomePage = () => {
               </div>
               </span>
 
-              <span style={{  position: 'absolute', left: "55%", top: "55%", height: '140px',  display: 'flex', flexDirection: "column", borderRadius: "10px", overflow: 'hidden', width: '40%', 
-              padding: '10px', backgroundColor: 'red', 
+              <span style={{  position: 'absolute', left: "55%", top: "55%", height: '160px',  display: 'flex', flexDirection: "column", borderRadius: "10px", overflow: 'hidden', width: '44%', 
+              padding: '10px', backgroundColor:" rgb(215,230,190)"
             }}> 
-                hola
+            <div style={{display: "flex", gap: "10px"}}>
+                 <img src={persona} alt="imagen persona" style={{ borderRadius: "50%", overflow: "hidden", objectFit: "cover"  }} />
+                 <div style={{ backgroundColor: "rgb(215,230,190)", borderRadius: "10px", padding: "10px"}}>
+              <p>
+                Leí un artículo sobre cómo 1 litro de aceite puede contaminar hasta 1.000 litros de agua... y me impactó. Desde ese día decidí no botar nunca más el aceite usado por el lavaplatos. Reciclarlo es lo mínimo que puedo hacer por el planeta.
+              </p>
+                 </div>
+            </div>
               </span>
 
              
