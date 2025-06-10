@@ -60,7 +60,9 @@ const SignUpPage = () => {
             }
           }
         }}  
-      forceRedirectUrl={"/home"}/>
+        forceRedirectUrl={`${origin}/home`}
+    fallbackRedirectUrl={`${origin}/home`}
+    />
     </div>
   )
 }

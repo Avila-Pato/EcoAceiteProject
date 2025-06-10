@@ -6,6 +6,7 @@ import "./styles//home-page.css"
 import App from "./App.jsx";
 import { ErrorBoundary } from "react-error-boundary";
 import { ClerkProvider } from "@clerk/clerk-react";
+import { AuthProvider } from "./context/AuthContext.jsx";
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
@@ -15,10 +16,12 @@ if (!PUBLISHABLE_KEY) {
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
+    <AuthProvider>
     <ErrorBoundary fallback={<div>Algo ha salido mal</div>}>
       <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
         <App />
       </ClerkProvider>
     </ErrorBoundary>
+    </AuthProvider>
   </StrictMode>
 );
