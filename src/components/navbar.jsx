@@ -1,3 +1,6 @@
+import {  UserButton } from "@clerk/clerk-react";
+
+
 const Navbar = () => {
   return (
     <>
@@ -6,6 +9,7 @@ const Navbar = () => {
           <li>Home</li>
           <li>Nosotros</li>
           <li>Juego</li>
+          <span className="class-user" style={{ position: "absolute", right: "10px", scale: "1.09" }}> <UserButton /></span>
         </ul>
       </div>
     </>

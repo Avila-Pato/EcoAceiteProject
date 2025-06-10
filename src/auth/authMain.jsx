@@ -3,17 +3,23 @@
 import { useAuth } from "@clerk/clerk-react"
 import { Link } from "react-router-dom"
 import "../styles/auth-page.css"
+import fondo from "../assets/fondo.png" // Import your background image
 
 function AuthPage() {
   const { isSignedIn } = useAuth()
 
   return (
     <main className="auth-main">
+      {/* Background image */}
+      <div className="background-image"> 
+        <img src={fondo} alt="fondo imagen"   /> 
+      </div>
       <title>Login y Registro - Botones Aceite Sostenible</title>
-
+    {/* Fondo imagen*/}
+      
       {/* Background decorative elements */}
       <div className="background-decorations">
-        <div className="decoration decoration-1"></div>
+        <div className="decoration decoration-1"></div> 
         <div className="decoration decoration-2"></div>
         <div className="decoration decoration-3"></div>
       </div>
@@ -35,6 +41,7 @@ function AuthPage() {
                   </div>
                 </div>
               </div>
+          
 
               <h1 className="main-title">EcoAceite</h1>
 

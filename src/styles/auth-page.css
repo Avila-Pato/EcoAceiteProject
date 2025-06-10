@@ -4,6 +4,7 @@
 }
 
 .auth-main {
+  position: relative;
   min-height: 100vh;
   background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 25%, #f0f9ff 75%, #ecfdf5 100%);
   position: relative;
@@ -60,12 +61,12 @@
 }
 
 .container {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 16px;
-  padding-top: 64px;
+  padding-top: 164px;
   padding-bottom: 64px;
 }
 
@@ -417,6 +418,9 @@
 /* Responsive design */
 @media (max-width: 768px) {
   .container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20%;
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -450,3 +454,16 @@
     font-size: 1rem;
   }
 }
+
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/fondo.png');
+  background-repeat: repeat ;
+  background-size: auto;
+  opacity: 0.25; 
+  pointer-events: none; /* Evita que la imagen interfiera con los eventos del mouse */}
