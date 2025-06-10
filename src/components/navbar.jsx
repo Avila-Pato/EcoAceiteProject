@@ -50,7 +50,6 @@ const Navbar = () => {
         .logo {
           font-weight: 900;
           font-size: 1.6rem;
-          color: var(--color-primary);
           user-select: none;
           cursor: default;
           display: flex;

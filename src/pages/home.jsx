@@ -36,7 +36,9 @@ const HomePage = () => {
                   Explora y asegura un cupo 
                 </h2>
                 <span>Del aceite usado al cambio verde: transformando ciudades</span>
-                <button style={{borderRadius: "10px", overflow: "hidden", marginTop: "10px"}} >Explora</button>
+                <button style={{borderRadius: "10px", overflow: "hidden", marginTop: "10px", cursor: "pointer",
+                  padding: "10px"
+                }} >Explora</button>
               </div>
             <div
               style={{
@@ -94,6 +96,13 @@ const HomePage = () => {
               </div>
               </span>
 
+              <span style={{  position: 'absolute', left: "55%", top: "55%", height: '140px',  display: 'flex', flexDirection: "column", borderRadius: "10px", overflow: 'hidden', width: '40%', 
+              padding: '10px', backgroundColor: 'red', 
+            }}> 
+                hola
+              </span>
+
+             
 
             <div
               style={{
