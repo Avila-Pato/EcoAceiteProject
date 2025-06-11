@@ -11,6 +11,13 @@ import paso4 from "../assets/pasos/paso4.png";
 import mapa from "../assets/mapa.png";
 import back from "../assets/pasos/back.png"
 
+
+import kfc from  "../assets/logos/KFC-Logo-PNG12.png"
+import burger from  "../assets/logos/burger.png"
+import macdonals from  "../assets/logos/mcdonalds-png-logo-2785.png"
+import subway from  "../assets/logos/subway-photo-logo-4310.png"
+
+
 import { markers } from "../data/recyclingPoint.js";
 
 
@@ -83,6 +90,20 @@ function FitMapToMarkers() {
     </button>
   </div>
 </section>
+{/* Silder de abajo */}
+<section class="slider">
+  <div class="slider-track">
+    <div class="slide"><img src={kfc} alt="KFC"   /></div>
+    <div class="slide"><img src={macdonals} alt="McDonald's" /></div>
+    <div class="slide"><img src={burger} alt="Burger King" /></div>
+    <div class="slide"><img src={subway} alt="Subway" /></div>
+     <div class="slide"><img src={kfc} alt="KFC" /></div>
+    <div class="slide"><img src={macdonals} alt="McDonald's" /></div>
+    <div class="slide"><img src={burger} alt="Burger King" /></div>
+    <div class="slide"><img src={subway} alt="Subway" /></div>
+  </div>
+</section>
+
 
         {/* <div className="background-image-home">
           <img src={fondo2} alt="fondo imagen" />
@@ -160,6 +181,7 @@ function FitMapToMarkers() {
                     cursor: "pointer",
                     transition: "background-color 0.3s ease",
                   }}
+                  onClick = {() => alert("Más información próximamente")}
                   onMouseOver={(e) =>
                     (e.currentTarget.style.backgroundColor = "#005f56")
                   }

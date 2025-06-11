@@ -221,3 +221,40 @@ body {
     order: 2;
   }
 }
+
+
+/* Slider Button down to slice the logo fast food */
+.slider {
+  overflow: hidden;
+  background: #fff;
+  padding: 20px 0;
+}
+
+.slider-track {
+  display: flex;
+  width: calc(250px * 3); /* ancho por cantidad de logos */
+  animation: scroll 10s linear infinite;
+}
+
+.slide {
+  width: 250px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  width: 70px;
+  height: auto;
+  object-fit: contain;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
