@@ -4,9 +4,7 @@ import Navbar from "../components/navbar";
 
 
 export default function GamePage() {
-  // Simulate a recycling animation sequence
-
-  // Sample recycling facts
+ 
 
   return (
     <>

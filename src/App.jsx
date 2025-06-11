@@ -7,6 +7,8 @@ import AuthPage from "./auth/authMain";
 import HomePage from "./pages/home";
 import GamePage from "./pages/game";
 import Navbar from "./components/navbar.jsx";
+import 'leaflet/dist/leaflet.css';
+
 
 function App() {
   return (

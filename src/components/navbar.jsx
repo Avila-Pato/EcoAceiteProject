@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <>
 
-      <nav className="navbar" role="navigation" aria-label="Main navigation">
+      <nav className="navbar" role="navigation" aria-label="Main navigation" style= {{ position: "relative" }}>
         <div className="logo" aria-label="OilRecycle logo">
           <img src={logo} alt="fondo vector" style={{ inlineSize: " 50px" }} />
           <span
@@ -20,9 +20,17 @@ const Navbar = () => {
             title="Recycle icon"
           >
             EcoAceite
+
           </span>
+          <div style= {{ backgroundColor: "green", position: "absolute", left: "20%", padding: 
+            "30px", borderRadius: "10px", overflow: "hidden" }} > 
+
+             <div className="logos-social" style={{ display: "flex", alignItems: "center", color: "white", fontWeight: "bold" }}>
+          ♻ <span style={{ marginLeft: "8px", fontSize: "20px"}}>Recicla</span>
+        </div>
         </div>
 
+          </div>
         <ul className={`nav-links${menuOpen ? " open" : ""}`}>
           <li
           className="home-button"

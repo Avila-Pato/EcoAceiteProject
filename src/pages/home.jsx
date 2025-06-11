@@ -1,4 +1,4 @@
-import fondo2 from "../assets/fondo2.jpg"; // Import your background image
+// import fondo2 from "../assets/fondo2.jpg"; // Import your background image
 import hola from "../assets/hola.jpg";
 import oil from "../assets/oil.jpg"; // Import your vector image
 import oil2 from "../assets/oil2.jpg";
@@ -8,18 +8,85 @@ import paso1 from "../assets/pasos/paso1.png";
 import paso2 from "../assets/pasos/paso2.png";
 import paso3 from "../assets/pasos/paso3.png";
 import paso4 from "../assets/pasos/paso4.png";
+import mapa from "../assets/mapa.png";
+import back from "../assets/pasos/back.png"
+
+import { markers } from "../data/recyclingPoint.js";
+
 
 import Navbar from "../components/navbar";
 
+import { useMap } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import L from 'leaflet';
 
 const HomePage = () => {
+  const icon = new L.Icon({
+  iconUrl: 'https://cdn-icons-png.flaticon.com/512/684/684908.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41]
+})
+
+function FitMapToMarkers() {
+  const map = useMap();
+  map.fitBounds(markers);
+  return null;
+}
+
   return (
     <>
     <Navbar />
       <main className="main-page">
-        <div className="background-image-home">
+
+       <section className="main-background" style={{ position: "relative", textAlign: "center", color: "black" }}>
+  <img
+    src={back}
+    alt="fondo imagen"
+    style={{ width: "100%", height: "auto", maxHeight: "700px", objectFit: "cover" }}
+  />
+  <div
+    style={{
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-100%, -70%)",
+      padding: "2rem",
+      borderRadius: "15px",
+      maxWidth: "600px",
+      fontSize: "1.2rem",
+      lineHeight: "1.5",
+      fontWeight: "500",
+      textAlign: "left", // texto alineado a la izquierda
+    }}
+  >
+    <h1 style={{ marginBottom: "1rem", fontSize: "2rem" }}>
+      Recicla tu Aceite: Protege el Medio Ambiente desde tu Cocina
+    </h1>
+    <p>
+      El aceite de cocina usado es uno de los residuos domésticos más contaminantes cuando se desecha incorrectamente. Tirarlo por el desagüe puede obstruir cañerías, dañar plantas de tratamiento y contaminar agua potable. A través del reciclaje, evitamos estos problemas y contribuimos a crear productos como biodiésel, jabones y velas. ¡Pequeños cambios con gran impacto!
+    </p>
+    <button
+      style={{
+        marginTop: "1.5rem",
+        padding: "0.75rem 1.5rem",
+        backgroundColor: "#28a745",
+        color: "white",
+        border: "none",
+        borderRadius: "8px",
+        cursor: "pointer",
+        fontSize: "1rem",
+        fontWeight: "600",
+      }}
+      onClick={() => alert("Más información próximamente")}
+    >
+      Más información
+    </button>
+  </div>
+</section>
+
+        {/* <div className="background-image-home">
           <img src={fondo2} alt="fondo imagen" />
-        </div>
+        </div> */}
 
         <section
           className="home-page"
@@ -43,7 +110,7 @@ const HomePage = () => {
                 flexDirection: "column",
                 justifyContent: "center",
                 textAlign: "center",
-                marginLeft: "40px",
+                // marginLeft: "10px",
                 paddingBottom: "5%",
                 gap: "10px",
               }}
@@ -264,12 +331,13 @@ const HomePage = () => {
               display: "grid",
               gridTemplateColumns: "repeat(4, 1fr)",
               gap: "1rem",
+              marginLeft: "10px",
             }}
           >
-            <img src={paso1} alt="" width={200} />
-            <img src={paso2} alt="" width={200} />
-            <img src={paso3} alt="" width={200} />
-            <img src={paso4} alt="" width={200} />
+            <img src={paso1} alt="" width={200} style= {{ marginLeft: "30px" }} />
+            <img src={paso2} alt="" width={200} style= {{ marginLeft: "30px" }} />
+            <img src={paso3} alt="" width={200} style= {{ marginLeft: "30px" }} />
+            <img src={paso4} alt="" width={200} style= {{ marginLeft: "30px" }} />
             <div>
               Conecta tu embudo a una botella plástica. ¡Ya tienes tu contenedor
               de aceite de cocina!
@@ -286,6 +354,56 @@ const HomePage = () => {
             <div>Reutiliza tu embudo y conéctalo a una nueva botella.</div>
           </div>
         </section>
+        <section
+  style={{
+    marginTop: "4rem",
+    padding: "2rem",
+    backgroundColor: "#f0f4f8",
+    borderRadius: "12px",
+    boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+    textAlign: "center",
+  }}
+>
+  <h3 style={{ fontSize: "1.75rem", marginBottom: "1rem", color: "#00796b" }}>
+    Puntos de Reciclaje de Aceite
+  </h3>
+  <p style={{ maxWidth: "700px", margin: "0 auto 2rem", color: "#444" }}>
+    Encuentra el punto de recolección más cercano a tu ubicación. Este mapa muestra lugares habilitados para reciclar tu aceite de cocina usado.
+  </p>
+  <img
+    src={mapa}
+    alt="Mapa puntos de reciclaje"
+    style={{
+      width: "100%",
+      maxWidth: "1100px",
+      borderRadius: "10px",
+      border: "2px solid #00796b",
+    }}
+  />
+
+  <MapContainer center={[-33.4569, -70.6483]} zoom={13} style={{ height: "400px", width: "100%", marginTop: "2rem" }}>
+  <TileLayer
+    attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+  />
+
+
+  {markers.map((pos, idx) => (
+    <Marker key={idx} position={pos.coords} icon={icon}>
+      <Popup>
+         <h4>{pos.name}</h4>
+              <p><strong>Dirección:</strong> {pos.address}</p>
+              <small>Lleva tu aceite usado en botella cerrada.</small>
+      </Popup>
+    </Marker>
+  ))}
+
+</MapContainer>
+
+</section>
+<footer>
+  <p>Mapa y datos geográficos proporcionados por <a href="https://vitacura.cl/" target="_blank" rel="noopener noreferrer">Municipalidad de Vitacura</a>. Todos los derechos reservados.</p>
+</footer>
       </main>
     </>
   );
