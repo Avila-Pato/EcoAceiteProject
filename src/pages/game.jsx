@@ -1,5 +1,7 @@
 import juego from "../assets/juego.png";
 import gota from "../assets/gota.png";
+import Navbar from "../components/navbar";
+
 
 export default function GamePage() {
   // Simulate a recycling animation sequence
@@ -8,6 +10,7 @@ export default function GamePage() {
 
   return (
     <>
+    <Navbar />
       <main className="main-section" style={{ position: "relative" }}>
         <section
           ection

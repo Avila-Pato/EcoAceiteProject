@@ -11,7 +11,7 @@ import Navbar from "./components/navbar.jsx";
 function App() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         {/* Login y register */}
         <Route path="/" element={<AuthPage />} />

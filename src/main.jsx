@@ -27,6 +27,7 @@ createRoot(document.getElementById("root")).render(
             signInForceRedirectUrl={"/home"}
             signUpForceRedirectUrl={"/home"}
           >
+            
             <App />
           </ClerkProvider>
         </ErrorBoundary>

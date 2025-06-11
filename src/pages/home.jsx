@@ -9,9 +9,13 @@ import paso2 from "../assets/pasos/paso2.png";
 import paso3 from "../assets/pasos/paso3.png";
 import paso4 from "../assets/pasos/paso4.png";
 
+import Navbar from "../components/navbar";
+
+
 const HomePage = () => {
   return (
     <>
+    <Navbar />
       <main className="main-page">
         <div className="background-image-home">
           <img src={fondo2} alt="fondo imagen" />
