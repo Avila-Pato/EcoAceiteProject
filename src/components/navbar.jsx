@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { UserButton } from "@clerk/clerk-react";
 import logo from "../assets/logo.png"
-
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
   const toggleMenu = () => setMenuOpen((open) => !open);
+  const navigate = useNavigate()
+
 
   return (
     <>
@@ -39,12 +40,12 @@ const Navbar = () => {
         nav.navbar {
           position: sticky;
           width: 100%;
-          backdrop-filter: saturate(180%) blur(10px);
+          background: linear-gradient(135deg,rgb(255, 255, 255) 0%,rgb(220, 227, 226) 100%);
           display: flex;
           align-items: center;
           justify-content: space-between;
           padding: var(--spacing) calc(var(--spacing)*2);
-          box-shadow: 0 4px 12px rgba(46, 125, 50, 0.15);
+          box-shadow: 0 4px 12px rgba(46, 125, 50);
           zIndex: 50;
         }
 
@@ -172,9 +173,8 @@ const Navbar = () => {
         </div>
 
         <ul className={`nav-links${menuOpen ? ' open' : ''}`}>
-          <li tabIndex={0} onClick={() => setMenuOpen(false)}>Home</li>
-          <li tabIndex={0} onClick={() => setMenuOpen(false)}>Nosotros</li>
-          <li tabIndex={0} onClick={() => setMenuOpen(false)}>Juego</li>
+          <li tabIndex={0} onClick={() =>  { setMenuOpen(false); navigate("/home")}}>Home</li>
+          <li tabIndex={0} onClick={() => { setMenuOpen(false); navigate("/game"); }}>Juego</li>
         </ul>
 
         <button

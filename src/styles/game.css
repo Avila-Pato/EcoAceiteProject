@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+section.game-area {
+  background: #12432a;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 0.15);
+  padding: 32px;
+  color: #dff6e4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.oil-container {
+  background: linear-gradient(145deg, #292828, #1c1c1c);
+  width: 140px;
+  height: 220px;
+  border-radius: 40px 40px 30px 30px;
+  position: relative;
+  box-shadow: inset 0 0 5px #444, 0 6px 8px rgba(0,0,0,0.7);
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.oil-container:hover {
+  transform: scale(1.05);
+}
+
+.oil-label {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #ffc107;
+  text-shadow: 1px 1px 4px #000;
+  margin-bottom: 12px;
+  user-select: none;
+}
+
+.oil-liquid {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(180deg, #000000, #2e2e2e);
+  border-radius: 50% / 45%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 3px 10px rgba(255, 193, 7, 0.8);
+}
+
+.oil-liquid::before {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle at 30% 30%, #fffec6 30%, transparent 80%);
+  border-radius: 50%;
+  top: -30px;
+  left: -10px;
+  animation: swirl 6s linear infinite;
+  opacity: 0.35;
+}
+
+@keyframes swirl {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+
+button.recycle-btn {
+  background-color: #00a676;
+  border: none;
+  padding: 14px 32px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 40px;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 166, 118, 0.6);
+  margin-top: 24px;
+  user-select: none;
+  align-self: center;
+  min-width: 220px;
+}
+
+button.recycle-btn:hover,
+button.recycle-btn:focus {
+  background-color: #007a50;
+  outline: none;
+}
+
+.recycle-msg {
+  position: absolute;
+  top: 16%;
+  background: #00ff7f;
+  padding: 16px 28px;
+  border-radius: 24px;
+  font-weight: 700;
+  color: #004d24;
+  text-transform: uppercase;
+  box-shadow: 0 0 12px #00ff7f;
+  opacity: 1;
+  animation: fadeUp 3s forwards;
+  user-select: none;
+  pointer-events: none;
+}
+
+@keyframes fadeUp {
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-40px); }
+}
+
+section.info-panel {
+  background: #f0f6f4;
+  border-radius: 16px;
+  box-shadow: 0 10px 16px rgb(0 0 0 / 0.08);
+  padding: 32px;
+  color: #1b4332;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 400px;
+}
+
+section.info-panel h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #00a676;
+  padding-bottom: 8px;
+  user-select: none;
+}
+
+ul.facts-list {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+ul.facts-list li {
+  margin-bottom: 14px;
+}
+
+section.extra-info {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 0.05);
+  padding: 32px;
+  min-height: 400px;
+  color: #154734;
+  font-size: 1rem;
+  line-height: 1.5;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section.extra-info h3 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  user-select: none;
+}
+
+section.extra-info p {
+  margin-bottom: 16px;
+}
+
+@media (min-width: 1024px) {
+  section.extra-info {
+    display: flex;
+  }
+}
+
+footer {
+  background: #245953;
+  color: #d4f1f4;
+  text-align: center;
+  padding: 12px 24px;
+  font-size: 0.9rem;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+main::-webkit-scrollbar {
+  width: 12px;
+}
+main::-webkit-scrollbar-thumb {
+  background-color: #00a676;
+  border-radius: 20px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+main::-webkit-scrollbar-track {
+  background: #e2f0ea;
+}
