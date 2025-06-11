@@ -146,7 +146,7 @@ function FitMapToMarkers() {
                 }}
               >
                 <h2 style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>
-                  Explora y asegura tu cupo
+                  Marcas que se suman al cambio
                 </h2>
                 <p
                   style={{
@@ -164,7 +164,6 @@ function FitMapToMarkers() {
                   style={{
                     display: "block",
                     fontWeight: "bold",
-                    marginBottom: "1.5rem",
                     color: "#00796b",
                   }}
                 >
@@ -176,6 +175,7 @@ function FitMapToMarkers() {
                     color: "#fff",
                     border: "none",
                     borderRadius: "8px",
+                    marginTop: "20px",
                     padding: "12px 24px",
                     fontSize: "1rem",
                     cursor: "pointer",
@@ -340,6 +340,7 @@ function FitMapToMarkers() {
             style={{
               display: "flex",
               flexDirection: "column",
+              paddingTop: "40px",
               textAlign: "center",
               fontSize: 30,
               fontFamily: "cursive",
