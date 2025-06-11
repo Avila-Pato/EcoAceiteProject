@@ -327,6 +327,7 @@ const HomePage = () => {
                     borderRadius: "50%",
                     overflow: "hidden",
                     objectFit: "cover",
+                    // transition:  "transform 300ms ease-in-out",
                   }}
                 />
                 <div
