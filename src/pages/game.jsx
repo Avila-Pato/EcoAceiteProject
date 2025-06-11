@@ -55,7 +55,7 @@ export default function GamePage() {
         </section>
       </main>
 
-      <footer>&copy; 2024 Oil Recycling Awareness Initiative</footer>
+      <footer>&copy; 2025 EcoAceite</footer>
     </>
   );
 }
