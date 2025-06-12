@@ -10,7 +10,6 @@ import { ClerkProvider } from "@clerk/clerk-react";
 import { AuthProvider } from "./context/AuthContext.jsx";
 import { BrowserRouter } from "react-router-dom";
 
-
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
 if (!PUBLISHABLE_KEY) {
@@ -21,13 +20,12 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <AuthProvider>
       <BrowserRouter>
-        <ErrorBoundary fallback={<div>Algo ha salido mal</div>}>
+        <ErrorBoundary fallback={<div style={{ colord: 'red', fontSize: 'bolder', textAlign: 'center', }}>Algo ha salido mal</div>}>
           <ClerkProvider
             publishableKey={PUBLISHABLE_KEY}
             signInForceRedirectUrl={"/home"}
             signUpForceRedirectUrl={"/home"}
           >
-            
             <App />
           </ClerkProvider>
         </ErrorBoundary>

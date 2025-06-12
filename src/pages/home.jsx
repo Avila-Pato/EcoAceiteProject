@@ -3,6 +3,7 @@ import hola from "../assets/hola.jpg";
 import oil from "../assets/oil.jpg"; // Import your vector image
 import oil2 from "../assets/oil2.jpg";
 import oil3 from "../assets/oil3.jpg";
+import recycle from "../assets/recycle.png"
 
 import paso1 from "../assets/pasos/paso1.png";
 import paso2 from "../assets/pasos/paso2.png";
@@ -17,12 +18,11 @@ import macdonals from "../assets/logos/mcdonalds-png-logo-2785.png";
 import subway from "../assets/logos/subway-photo-logo-4310.png";
 
 import { markers } from "../data/recyclingPoint.js";
-import { useMap } from "react-leaflet";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 
 // eslint-disable-next-line no-unused-vars
-import { motion, scale } from "framer-motion";
+import { GroupAnimation, motion } from "framer-motion";
 
 import useScrollAnimation from "../utils/useScrollAnimation.js";
 
@@ -37,11 +37,7 @@ const HomePage = () => {
     iconAnchor: [12, 41],
   });
 
-  function FitMapToMarkers() {
-    const map = useMap();
-    map.fitBounds(markers);
-    return null;
-  }
+  
 
   return (
     <>
@@ -49,7 +45,6 @@ const HomePage = () => {
       <main className="main-page">
         <section
           className="main-background"
-          style={{ position: "relative", textAlign: "center", color: "black" }}
         >
           <img
             src={back}
@@ -62,22 +57,10 @@ const HomePage = () => {
             }}
           />
           <div
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-100%, -70%)",
-              padding: "2rem",
-              borderRadius: "15px",
-              maxWidth: "700px",
-              fontSize: "1.2rem",
-              lineHeight: "1.5",
-              fontWeight: "500",
-              textAlign: "left", // texto alineado a la izquierda
-            }}
-          >
+          className="texto-main">
             <motion.h1
               className="popa1"
+
               style={{ marginBottom: "1rem", fontSize: "2rem" }}
               ref={ref}
               initial={{ opacity: 0, y: 50 }}
@@ -88,6 +71,7 @@ const HomePage = () => {
             >
               Recicla tu Aceite: Protege el Medio Ambiente desde tu Cocina
             </motion.h1>
+
             <div
               className="backdrop-filter"
               style={{
@@ -115,17 +99,8 @@ const HomePage = () => {
               </motion.div>
             </div>
             <button
-              style={{
-                marginTop: "1.5rem",
-                padding: "0.75rem 1.5rem",
-                backgroundColor: "#28a745",
-                color: "white",
-                border: "none",
-                borderRadius: "8px",
-                cursor: "pointer",
-                fontSize: "1rem",
-                fontWeight: "600",
-              }}
+            className="button-main"
+              
               onClick={() => alert("Más información próximamente")}
             >
               Más información
@@ -169,30 +144,19 @@ const HomePage = () => {
         <section
           className="home-page"
           style={{
-            position: "relative",
-            marginRight: "50px",
-            marginLeft: "50px",
-            marginTop: "10px",
-            maxWidth: "1400px",
-
-            marginInline: "30px",
-            backgroundColor: "rgba(355, 355, 355)",
-            padding: "20px",
-            borderRadius: "10px",
+         
           }}
         >
           <article
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              padding: "2rem",
-              marginTop: "1rem",
-              backgroundColor: "#f0f4f8",
-              borderRadius: "12px",
-              gap: "2rem", // espacio entre texto e imagen
-            }}
+          className="home-article"
           >
+            <div style={{ position: 'relative' }}>
+            <ul style={{ position: 'absolute', display: "flex", flexDirection: "column", bottom: 5, gap:'3rem'}}>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram-icon lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook-icon lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter-icon lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></li>
+            </ul>
+              </div>
             {/* CONTENIDO DE TEXTO */}
             <section
               style={{
@@ -254,9 +218,12 @@ const HomePage = () => {
                 flexShrink: 0,
                 overflow: "hidden",
                 borderRadius: "10px",
-                marginBottom: "7rem",
+                marginBottom: "10rem",
               }}
             >
+              <div className="border-bottom">
+                  <img src={recycle} alt=""  width={80}/>
+              </div>
               <img
                 src={oil}
                 alt="fondo vector"
@@ -265,6 +232,7 @@ const HomePage = () => {
                 style={{ objectFit: "cover" }}
               />
             </div>
+            
             <div
               style={{
                 display: "grid",
@@ -273,6 +241,7 @@ const HomePage = () => {
                 marginBottom: "12rem",
               }}
             >
+              
               {/* primera imagegn */}
               <div
                 style={{
@@ -280,6 +249,7 @@ const HomePage = () => {
                   overflow: "hidden",
                 }}
               >
+                
                 <motion.img
                  src={oil3}
                   alt="fondo vector"
@@ -311,17 +281,20 @@ const HomePage = () => {
                     gridTemplateColumns: "1fr",
                     gap: "1rem",
                     backgroundColor: "rgba(85, 142, 123, 0.19)",
+                     width: '515px'
+                    
                   }}
                 >
-                  <p style={{ fontFamily: "cursive", fontSize: "Large" }}>
+                  <p style={{ fontFamily: "cursive", fontSize: "Large", }}>
                     Transformando el aceite usado, cuidando el planeta.
                   </p>
 
-                  <p style={{ maxWidth: "600px" }}>
+                  <p >
                     Reciclar 1 litro de aceite puede evitar la contaminación de
                     hasta 1.000 litros de agua — un acto simple con un impacto
                     del 99.9% en la protección de nuestros recursos hídricos.
                   </p>
+
                   <motion.div
                     whileHover={{ scale: 1, rotate: 1 }}
                    style={{ display: "flex", justifyContent: "end", cursor: "pointer",
@@ -403,28 +376,6 @@ const HomePage = () => {
             {/* </motion.div> */}
             </div>
           </article>
-
-          {/* <p
-              className="inline-p"
-              style={{
-                marginLeft: "10px",
-                borderBlockEnd: "3px solid green",
-                textAlign: "end",
-              }}
-            ></p>
-
-            <p
-              className="inline-p"
-              style={{ marginLeft: "10px", borderBlockEnd: "3px solid green" }}
-            ></p>
-            <p
-              className="inline-p"
-              style={{ marginLeft: "10px", borderBlockEnd: "3px solid green" }}
-            >
-              {" "}
-            </p> */}
-
-          {/* span  */}
 
           {/* how can i recycle oil */}
           <section style={{ padding: "2rem" }}>
@@ -603,7 +554,8 @@ const HomePage = () => {
           />
 
           <MapContainer
-            center={[-33.4569, -70.6483]}
+            center={[-33.3969, -70.5744]}
+            
             zoom={13}
             style={{ height: "400px", width: "100%", marginTop: "2rem" }}
           >
