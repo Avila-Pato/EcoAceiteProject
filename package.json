@@ -12,11 +12,14 @@
   "dependencies": {
     "@clerk/clerk-react": "^5.31.9",
     "@clerk/react-router": "^1.5.0",
+    "framer-motion": "^12.17.3",
     "leaflet": "^1.9.4",
     "lucide-react": "^0.513.0",
+    "motion": "^12.17.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-error-boundary": "^6.0.0",
+    "react-intersection-observer": "^9.16.0",
     "react-leaflet": "^5.0.0",
     "react-router-dom": "^7.6.2"
   },

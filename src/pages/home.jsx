@@ -17,14 +17,20 @@ import macdonals from "../assets/logos/mcdonalds-png-logo-2785.png";
 import subway from "../assets/logos/subway-photo-logo-4310.png";
 
 import { markers } from "../data/recyclingPoint.js";
-
-import Navbar from "../components/navbar";
-
 import { useMap } from "react-leaflet";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
+
+import useScrollAnimation from "../utils/useScrollAnimation.js";
+
+import Navbar from "../components/navbar";
+
 const HomePage = () => {
+  const { ref, controls } = useScrollAnimation();
+
   const icon = new L.Icon({
     iconUrl: "https://cdn-icons-png.flaticon.com/512/684/684908.png",
     iconSize: [25, 41],
@@ -84,14 +90,23 @@ const HomePage = () => {
                 borderRadius: "30px",
               }}
             >
-              <p className="popa">
-                El aceite de cocina usado es uno de los residuos domésticos más
-                contaminantes cuando se desecha incorrectamente. Tirarlo por el
-                desagüe puede obstruir cañerías, dañar plantas de tratamiento y
-                contaminar agua potable. A través del reciclaje, evitamos estos
-                problemas y contribuimos a crear productos como biodiésel,
-                jabones y velas. ¡Pequeños cambios con gran impacto!
-              </p>
+              <motion.div
+                ref={ref}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.5 }}
+              >
+                <p className="popa">
+                  El aceite de cocina usado es uno de los residuos domésticos
+                  más contaminantes cuando se desecha incorrectamente. Tirarlo
+                  por el desagüe puede obstruir cañerías, dañar plantas de
+                  tratamiento y contaminar agua potable. A través del reciclaje,
+                  evitamos estos problemas y contribuimos a crear productos como
+                  biodiésel, jabones y velas. ¡Pequeños cambios con gran
+                  impacto!
+                </p>
+              </motion.div>
             </div>
             <button
               style={{
@@ -112,30 +127,30 @@ const HomePage = () => {
           </div>
         </section>
         {/* Silder de abajo */}
-        <section class="slider">
-          <div class="slider-track">
-            <div class="slide">
+        <section className="slider">
+          <div className="slider-track">
+            <div className="slide">
               <img src={kfc} alt="KFC" />
             </div>
-            <div class="slide">
+            <div className="slide">
               <img src={macdonals} alt="McDonald's" />
             </div>
-            <div class="slide">
+            <div className="slide">
               <img src={burger} alt="Burger King" />
             </div>
-            <div class="slide">
+            <div className="slide">
               <img src={subway} alt="Subway" />
             </div>
-            <div class="slide">
+            <div className="slide">
               <img src={kfc} alt="KFC" />
             </div>
-            <div class="slide">
+            <div className="slide">
               <img src={macdonals} alt="McDonald's" />
             </div>
-            <div class="slide">
+            <div className="slide">
               <img src={burger} alt="Burger King" />
             </div>
-            <div class="slide">
+            <div className="slide">
               <img src={subway} alt="Subway" />
             </div>
           </div>
@@ -160,7 +175,7 @@ const HomePage = () => {
             borderRadius: "10px",
           }}
         >
-          <section
+          <article
             style={{
               display: "flex",
               alignItems: "center",
@@ -173,7 +188,13 @@ const HomePage = () => {
             }}
           >
             {/* CONTENIDO DE TEXTO */}
-            <div style={{ flex: 1, textAlign: "left", marginBottom: "5rem" }}>
+            <section
+              style={{
+                textAlign: "center",
+                marginBottom: "10rem",
+                maxWidth: "300px",
+              }}
+            >
               <h2 style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>
                 Marcas que se suman al cambio
               </h2>
@@ -181,7 +202,6 @@ const HomePage = () => {
                 style={{
                   fontSize: "1.125rem",
                   color: "#333",
-                  maxWidth: "600px",
                   marginBottom: "1rem",
                 }}
               >
@@ -220,7 +240,7 @@ const HomePage = () => {
               >
                 Explorar iniciativas
               </button>
-            </div>
+            </section>
 
             {/* IMAGEN */}
             <div
@@ -250,6 +270,7 @@ const HomePage = () => {
               {/* primera imagegn */}
               <div
                 style={{
+                  borderRadius: "10px",
                   overflow: "hidden",
                 }}
               >
@@ -267,10 +288,12 @@ const HomePage = () => {
               <article
                 style={{
                   gridColumn: "span 2",
+                  borderRadius: "10px",
+                  padding: "1rem",
                   display: "grid",
                   gridTemplateColumns: "1fr",
                   gap: "1rem",
-                  backgroundColor: "red",
+                  backgroundColor: "rgba(85, 142, 123, 0.19)",
                 }}
               >
                 <p style={{ fontFamily: "cursive", fontSize: "Large" }}>
@@ -308,10 +331,15 @@ const HomePage = () => {
                   gridColumn: "span 2",
                   display: "grid",
                   gridTemplateColumns: "1fr",
-                  backgroundColor: "blue",
                 }}
               >
-                <div style={{ display: "flex", maxWidth: "600px", marginLeft: "16px" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    maxWidth: "515px",
+                    marginLeft: "2px",
+                  }}
+                >
                   <img
                     src={hola}
                     alt="imagen persona"
@@ -319,6 +347,8 @@ const HomePage = () => {
                       borderRadius: "50%",
                       overflow: "hidden",
                       objectFit: "cover",
+                      
+                      
                       // transition:  "transform 300ms ease-in-out",
                     }}
                   />
@@ -340,7 +370,7 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-          </section>
+          </article>
 
           {/* <p
               className="inline-p"
@@ -393,7 +423,20 @@ const HomePage = () => {
                   boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
                 }}
               >
-                <img src={paso1} alt="Paso 1 - Conecta embudo" width="100%" />
+                <motion.img
+                  src={paso1}
+                  ref={ref}
+                  controls={controls}
+                  alt="fondo vector"
+                  width={250}
+                  height={250}
+                  style={{ objectFit: "cover" }}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                  viewport={{ once: true }}
+                />
+
                 <p style={{ marginTop: "1rem" }}>
                   Conecta tu embudo a una botella plástica. ¡Ya tienes tu
                   contenedor de aceite!
@@ -410,7 +453,19 @@ const HomePage = () => {
                   boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
                 }}
               >
-                <img src={paso2} alt="Paso 2 - Vierte el aceite" width="100%" />
+                <motion.img
+                  src={paso2}
+                  ref={ref}
+                  controls={controls}
+                  alt="fondo vector"
+                  width={250}
+                  height={250}
+                  style={{ objectFit: "cover" }}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                  viewport={{ once: true }}
+                />
                 <p style={{ marginTop: "1rem" }}>
                   Deja enfriar el aceite y viértelo en el contenedor. Guárdalo
                   bajo el lavaplatos.
@@ -427,7 +482,19 @@ const HomePage = () => {
                   boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
                 }}
               >
-                <img src={paso3} alt="Paso 3 - Lleva la botella" width="100%" />
+                <motion.img
+                  src={paso3}
+                  ref={ref}
+                  controls={controls}
+                  alt="fondo vector"
+                  width={250}
+                  height={250}
+                  style={{ objectFit: "cover" }}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                  viewport={{ once: true }}
+                />
                 <p style={{ marginTop: "1rem" }}>
                   Una vez llena, ciérrala bien y llévala al punto de recolección
                   más cercano.
@@ -444,11 +511,20 @@ const HomePage = () => {
                   boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
                 }}
               >
-                <img
+                <motion.img
                   src={paso4}
-                  alt="Paso 4 - Reutiliza el embudo"
-                  width="100%"
+                  ref={ref}
+                  controls={controls}
+                  alt="fondo vector"
+                  width={250}
+                  height={250}
+                  style={{ objectFit: "cover" }}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                  viewport={{ once: true }}
                 />
+
                 <p style={{ marginTop: "1rem" }}>
                   Reutiliza tu embudo y conéctalo a una nueva botella. ¡Y repite
                   el proceso!
