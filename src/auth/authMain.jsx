@@ -14,7 +14,7 @@ function AuthPage() {
       <div className="background-image"> 
         <img src={fondo} alt="fondo imagen"   /> 
       </div>
-      <title>Login y Registro - Botones Aceite Sostenible</title>
+      <title>Aceite Sostenible</title>
     {/* Fondo imagen*/}
       
       {/* Background decorative elements */}
