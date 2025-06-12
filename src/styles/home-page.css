@@ -53,6 +53,8 @@
   /* border-bottom-left-radius: 10px; */
 }
 
+
+
 @media (max-width: 750px ) {
 .texto-main {
   display: flex;
@@ -88,10 +90,7 @@
   font-size: medium !important;
   word-wrap: break-word;
   font-size: smaller !important;
-
 }
-
-
 }
 .popa {
   font-family: 'Alegreya', serif;
