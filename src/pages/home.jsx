@@ -22,7 +22,7 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 
 // eslint-disable-next-line no-unused-vars
-import { motion } from "framer-motion";
+import { motion, scale } from "framer-motion";
 
 import useScrollAnimation from "../utils/useScrollAnimation.js";
 
@@ -76,12 +76,18 @@ const HomePage = () => {
               textAlign: "left", // texto alineado a la izquierda
             }}
           >
-            <h1
+            <motion.h1
               className="popa1"
               style={{ marginBottom: "1rem", fontSize: "2rem" }}
+              ref={ref}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.5 }}
+
             >
               Recicla tu Aceite: Protege el Medio Ambiente desde tu Cocina
-            </h1>
+            </motion.h1>
             <div
               className="backdrop-filter"
               style={{
@@ -295,16 +301,7 @@ const HomePage = () => {
                   whileTap={{ scale: 0.9 }} />
               </div>
 
-              <motion.div
-                whileHover={{ scale: 1, rotate: 1 }}
-                style={{
-                  gridColumn: "span 2",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  borderRadius: 10,
-                  cursor: "pointer",
-                }}
-              >
+             
                 <article
                   style={{
                     gridColumn: "span 2",
@@ -325,7 +322,12 @@ const HomePage = () => {
                     hasta 1.000 litros de agua — un acto simple con un impacto
                     del 99.9% en la protección de nuestros recursos hídricos.
                   </p>
-                  <div style={{ display: "flex", justifyContent: "end" }}>
+                  <motion.div
+                    whileHover={{ scale: 1, rotate: 1 }}
+                   style={{ display: "flex", justifyContent: "end", cursor: "pointer",
+
+                    
+                   }}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -342,11 +344,10 @@ const HomePage = () => {
                       <path d="M22 22 12 12" />
                       <path d="M22 16v6h-6" />
                     </svg>
-                  </div>
+                  </motion.div>
                 </article>
-              </motion.div>
               {/* perfil of the person who was writing */}
-                   <motion.div
+                   {/* <motion.div
                 whileHover={{ scale: 1, rotate: 1 }}
                 style={{
                   gridColumn: "span 2",
@@ -355,7 +356,7 @@ const HomePage = () => {
                   borderRadius: 10,
                   cursor: "pointer",
                 }}
-              >
+              > */}
 
               <div
                 style={{
@@ -399,7 +400,7 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            {/* </motion.div> */}
             </div>
           </article>
 
