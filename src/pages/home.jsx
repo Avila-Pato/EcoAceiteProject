@@ -274,7 +274,14 @@ const HomePage = () => {
                   overflow: "hidden",
                 }}
               >
-                <img src={oil3} alt="fondo vector" width={300} height={100} />
+                <motion.img
+                 src={oil3}
+                  alt="fondo vector"
+                 width={300}
+                  height={100}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                   />
               </div>
               {/* segunda imagen */}
               <div
@@ -283,49 +290,73 @@ const HomePage = () => {
                   overflow: "hidden",
                 }}
               >
-                <img src={oil2} alt="fondo vector" width={220} height={100} />
+                <motion.img src={oil2} alt="fondo vector" width={220} height={100}
+                   whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }} />
               </div>
-              <article
+
+              <motion.div
+                whileHover={{ scale: 1, rotate: 1 }}
                 style={{
                   gridColumn: "span 2",
-                  borderRadius: "10px",
-                  padding: "1rem",
-                  display: "grid",
-                  gridTemplateColumns: "1fr",
-                  gap: "1rem",
-                  backgroundColor: "rgba(85, 142, 123, 0.19)",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  borderRadius: 10,
+                  cursor: "pointer",
                 }}
               >
-                <p style={{ fontFamily: "cursive", fontSize: "Large" }}>
-                  Transformando el aceite usado, cuidando el planeta.
-                </p>
+                <article
+                  style={{
+                    gridColumn: "span 2",
+                    borderRadius: "10px",
+                    padding: "1rem",
+                    display: "grid",
+                    gridTemplateColumns: "1fr",
+                    gap: "1rem",
+                    backgroundColor: "rgba(85, 142, 123, 0.19)",
+                  }}
+                >
+                  <p style={{ fontFamily: "cursive", fontSize: "Large" }}>
+                    Transformando el aceite usado, cuidando el planeta.
+                  </p>
 
-                <p style={{ maxWidth: "600px" }}>
-                  Reciclar 1 litro de aceite puede evitar la contaminación de
-                  hasta 1.000 litros de agua — un acto simple con un impacto del
-                  99.9% en la protección de nuestros recursos hídricos.
-                </p>
-                <div style={{ display: "flex", justifyContent: "end" }}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-circle-arrow-out-down-right-icon lucide-circle-arrow-out-down-right"
-                  >
-                    <path d="M12 22a10 10 0 1 1 10-10" />
-                    <path d="M22 22 12 12" />
-                    <path d="M22 16v6h-6" />
-                  </svg>
-                </div>
-              </article>
-
+                  <p style={{ maxWidth: "600px" }}>
+                    Reciclar 1 litro de aceite puede evitar la contaminación de
+                    hasta 1.000 litros de agua — un acto simple con un impacto
+                    del 99.9% en la protección de nuestros recursos hídricos.
+                  </p>
+                  <div style={{ display: "flex", justifyContent: "end" }}>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="lucide lucide-circle-arrow-out-down-right-icon lucide-circle-arrow-out-down-right"
+                    >
+                      <path d="M12 22a10 10 0 1 1 10-10" />
+                      <path d="M22 22 12 12" />
+                      <path d="M22 16v6h-6" />
+                    </svg>
+                  </div>
+                </article>
+              </motion.div>
               {/* perfil of the person who was writing */}
+                   <motion.div
+                whileHover={{ scale: 1, rotate: 1 }}
+                style={{
+                  gridColumn: "span 2",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  borderRadius: 10,
+                  cursor: "pointer",
+                }}
+              >
+
               <div
                 style={{
                   gridColumn: "span 2",
@@ -347,8 +378,7 @@ const HomePage = () => {
                       borderRadius: "50%",
                       overflow: "hidden",
                       objectFit: "cover",
-                      
-                      
+
                       // transition:  "transform 300ms ease-in-out",
                     }}
                   />
@@ -369,6 +399,7 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
+            </motion.div>
             </div>
           </article>
 

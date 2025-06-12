@@ -22,12 +22,11 @@ const Navbar = () => {
             EcoAceite
 
           </span>
-          <div style= {{ backgroundColor: "green", position: "absolute", left: "20%", padding: 
-            "30px", borderRadius: "10px", overflow: "hidden" }} > 
-
+          <div className="logo-container" > 
              <div className="logos-social" style={{ display: "flex", alignItems: "center", color: "white", fontWeight: "bold" }}>
           ♻ <span style={{ marginLeft: "8px", fontSize: "20px"}}>Recicla</span>
         </div>
+        
         </div>
 
           </div>
