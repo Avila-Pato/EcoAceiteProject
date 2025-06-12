@@ -1,5 +1,4 @@
 import {useUser} from "@clerk/clerk-react"
-import { Children } from "react"
 import { Navigate } from "react-router-dom"
 
 const PrivateRoute = ({ children }) => {

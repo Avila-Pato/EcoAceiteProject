@@ -63,24 +63,36 @@ const HomePage = () => {
               transform: "translate(-100%, -70%)",
               padding: "2rem",
               borderRadius: "15px",
-              maxWidth: "600px",
+              maxWidth: "700px",
               fontSize: "1.2rem",
               lineHeight: "1.5",
               fontWeight: "500",
               textAlign: "left", // texto alineado a la izquierda
             }}
           >
-            <h1 style={{ marginBottom: "1rem", fontSize: "2rem" }}>
+            <h1
+              className="popa1"
+              style={{ marginBottom: "1rem", fontSize: "2rem" }}
+            >
               Recicla tu Aceite: Protege el Medio Ambiente desde tu Cocina
             </h1>
-            <p>
-              El aceite de cocina usado es uno de los residuos domésticos más
-              contaminantes cuando se desecha incorrectamente. Tirarlo por el
-              desagüe puede obstruir cañerías, dañar plantas de tratamiento y
-              contaminar agua potable. A través del reciclaje, evitamos estos
-              problemas y contribuimos a crear productos como biodiésel, jabones
-              y velas. ¡Pequeños cambios con gran impacto!
-            </p>
+            <div
+              className="backdrop-filter"
+              style={{
+                borderBlockEnd: "2px solid #28a745",
+                padding: "1rem",
+                borderRadius: "30px",
+              }}
+            >
+              <p className="popa">
+                El aceite de cocina usado es uno de los residuos domésticos más
+                contaminantes cuando se desecha incorrectamente. Tirarlo por el
+                desagüe puede obstruir cañerías, dañar plantas de tratamiento y
+                contaminar agua potable. A través del reciclaje, evitamos estos
+                problemas y contribuimos a crear productos como biodiésel,
+                jabones y velas. ¡Pequeños cambios con gran impacto!
+              </p>
+            </div>
             <button
               style={{
                 marginTop: "1.5rem",
@@ -148,87 +160,189 @@ const HomePage = () => {
             borderRadius: "10px",
           }}
         >
-          <div style={{ display: "flex", flexDirection: "row" }}>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                textAlign: "center",
-                // marginLeft: "10px",
-                paddingBottom: "5%",
-                gap: "10px",
-              }}
-            >
-              <section
+          <section
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              padding: "2rem",
+              marginTop: "1rem",
+              backgroundColor: "#f0f4f8",
+              borderRadius: "12px",
+              gap: "2rem", // espacio entre texto e imagen
+            }}
+          >
+            {/* CONTENIDO DE TEXTO */}
+            <div style={{ flex: 1, textAlign: "left", marginBottom: "5rem" }}>
+              <h2 style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>
+                Marcas que se suman al cambio
+              </h2>
+              <p
                 style={{
-                  padding: "2rem",
-                  marginTop: "2rem",
-                  textAlign: "center",
-                  backgroundColor: "#f0f4f8",
-                  borderRadius: "12px",
+                  fontSize: "1.125rem",
+                  color: "#333",
+                  maxWidth: "600px",
+                  marginBottom: "1rem",
                 }}
               >
-                <h2 style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>
-                  Marcas que se suman al cambio
-                </h2>
-                <p
-                  style={{
-                    fontSize: "1.125rem",
-                    color: "#333",
-                    maxWidth: "600px",
-                    margin: "0 auto 1rem",
-                  }}
-                >
-                  Sé parte del cambio: descubre cómo el reciclaje de aceite
-                  usado puede convertir nuestras ciudades en espacios más
-                  verdes, limpios y sostenibles.
-                </p>
-                <span
-                  style={{
-                    display: "block",
-                    fontWeight: "bold",
-                    color: "#00796b",
-                  }}
-                >
-                  Del aceite usado al cambio verde: transformando ciudades
-                </span>
-                <button
-                  style={{
-                    backgroundColor: "#00796b",
-                    color: "#fff",
-                    border: "none",
-                    borderRadius: "8px",
-                    marginTop: "20px",
-                    padding: "12px 24px",
-                    fontSize: "1rem",
-                    cursor: "pointer",
-                    transition: "background-color 0.3s ease",
-                  }}
-                  onClick={() => alert("Más información próximamente")}
-                  onMouseOver={(e) =>
-                    (e.currentTarget.style.backgroundColor = "#005f56")
-                  }
-                  onMouseOut={(e) =>
-                    (e.currentTarget.style.backgroundColor = "#00796b")
-                  }
-                >
-                  Explorar iniciativas
-                </button>
-              </section>
+                Sé parte del cambio: descubre cómo el reciclaje de aceite usado
+                puede convertir nuestras ciudades en espacios más verdes,
+                limpios y sostenibles.
+              </p>
+              <span
+                style={{
+                  fontWeight: "bold",
+                  color: "#00796b",
+                }}
+              >
+                Del aceite usado al cambio verde: transformando ciudades
+              </span>
+              <br />
+              <button
+                style={{
+                  backgroundColor: "#00796b",
+                  color: "#fff",
+                  border: "none",
+                  borderRadius: "8px",
+                  marginTop: "20px",
+                  padding: "12px 24px",
+                  fontSize: "1rem",
+                  cursor: "pointer",
+                  transition: "background-color 0.3s ease",
+                }}
+                onClick={() => alert("Más información próximamente")}
+                onMouseOver={(e) =>
+                  (e.currentTarget.style.backgroundColor = "#005f56")
+                }
+                onMouseOut={(e) =>
+                  (e.currentTarget.style.backgroundColor = "#00796b")
+                }
+              >
+                Explorar iniciativas
+              </button>
+            </div>
+
+            {/* IMAGEN */}
+            <div
+              style={{
+                flexShrink: 0,
+                overflow: "hidden",
+                borderRadius: "10px",
+                marginBottom: "7rem",
+              }}
+            >
+              <img
+                src={oil}
+                alt="fondo vector"
+                width={300}
+                height={500}
+                style={{ objectFit: "cover" }}
+              />
             </div>
             <div
               style={{
-                top: "20px",
-                right: "20px",
-                borderRadius: "10px",
-                marginLeft: "30px",
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
+                gap: "1rem",
+                marginBottom: "12rem",
               }}
             >
-              <img src={oil} alt="fondo vector" width={300} height={500} />
-            </div>
+              {/* primera imagegn */}
+              <div
+                style={{
+                  overflow: "hidden",
+                }}
+              >
+                <img src={oil3} alt="fondo vector" width={300} height={100} />
+              </div>
+              {/* segunda imagen */}
+              <div
+                style={{
+                  borderRadius: "10px",
+                  overflow: "hidden",
+                }}
+              >
+                <img src={oil2} alt="fondo vector" width={220} height={100} />
+              </div>
+              <article
+                style={{
+                  gridColumn: "span 2",
+                  display: "grid",
+                  gridTemplateColumns: "1fr",
+                  gap: "1rem",
+                  backgroundColor: "red",
+                }}
+              >
+                <p style={{ fontFamily: "cursive", fontSize: "Large" }}>
+                  Transformando el aceite usado, cuidando el planeta.
+                </p>
 
-            <p
+                <p style={{ maxWidth: "600px" }}>
+                  Reciclar 1 litro de aceite puede evitar la contaminación de
+                  hasta 1.000 litros de agua — un acto simple con un impacto del
+                  99.9% en la protección de nuestros recursos hídricos.
+                </p>
+                <div style={{ display: "flex", justifyContent: "end" }}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-circle-arrow-out-down-right-icon lucide-circle-arrow-out-down-right"
+                  >
+                    <path d="M12 22a10 10 0 1 1 10-10" />
+                    <path d="M22 22 12 12" />
+                    <path d="M22 16v6h-6" />
+                  </svg>
+                </div>
+              </article>
+
+              {/* perfil of the person who was writing */}
+              <div
+                style={{
+                  gridColumn: "span 2",
+                  display: "grid",
+                  gridTemplateColumns: "1fr",
+                  backgroundColor: "blue",
+                }}
+              >
+                <div style={{ display: "flex", maxWidth: "600px", marginLeft: "16px" }}>
+                  <img
+                    src={hola}
+                    alt="imagen persona"
+                    style={{
+                      borderRadius: "50%",
+                      overflow: "hidden",
+                      objectFit: "cover",
+                      // transition:  "transform 300ms ease-in-out",
+                    }}
+                  />
+                  <div
+                    style={{
+                      backgroundColor: "rgb(215,230,190)",
+                      borderRadius: "10px",
+                      padding: "10px",
+                    }}
+                  >
+                    <p>
+                      Leí un artículo sobre cómo 1 litro de aceite puede
+                      contaminar hasta 1.000 litros de agua... y me impactó.
+                      Desde ese día decidí no botar nunca más el aceite usado
+                      por el lavaplatos. Reciclarlo es lo mínimo que puedo hacer
+                      por el planeta.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* <p
               className="inline-p"
               style={{
                 marginLeft: "10px",
@@ -246,120 +360,10 @@ const HomePage = () => {
               style={{ marginLeft: "10px", borderBlockEnd: "3px solid green" }}
             >
               {" "}
-            </p>
-            <div
-              style={{
-                position: "absolute",
-                right: "40px",
-                top: "70px",
-                borderRadius: "10px",
-                overflow: "hidden",
-              }}
-            >
-              <img src={oil3} alt="fondo vector" width={300} height={100} />
-            </div>
+            </p> */}
 
-            {/* span  */}
-            <span
-              style={{
-                position: "absolute",
-                left: "55%",
-                top: "20%",
-                height: "140px",
-                display: "flex",
-                flexDirection: "column",
-                borderRadius: "10px",
-                overflow: "hidden",
-                width: "44%",
-                backgroundColor: "rgb(240,239,230)",
-                padding: "10px",
-              }}
-            >
-              <p style={{ fontFamily: "cursive", fontSize: "Large" }}>
-                Transformando el aceite usado, cuidando el planeta.
-                <br />
-              </p>
-              <p style={{ marginTop: "5px" }}>
-                Reciclar 1 litro de aceite puede evitar la contaminación de
-                hasta 1.000 litros de agua — un acto simple con un impacto del
-                99.9% en la protección de nuestros recursos hídricos.
-              </p>
-              <div style={{ display: "flex", justifyContent: "end" }}>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-circle-arrow-out-down-right-icon lucide-circle-arrow-out-down-right"
-                >
-                  <path d="M12 22a10 10 0 1 1 10-10" />
-                  <path d="M22 22 12 12" />
-                  <path d="M22 16v6h-6" />
-                </svg>
-              </div>
-            </span>
+          {/* span  */}
 
-            <span
-              style={{
-                position: "absolute",
-                left: "55%",
-                top: "37%",
-                height: "160px",
-                display: "flex",
-                flexDirection: "column",
-                borderRadius: "10px",
-                overflow: "hidden",
-                width: "44%",
-                padding: "10px",
-                backgroundColor: " rgb(215,230,190)",
-              }}
-            >
-              <div style={{ display: "flex", gap: "10px" }}>
-                <img
-                  src={hola}
-                  alt="imagen persona"
-                  style={{
-                    borderRadius: "50%",
-                    overflow: "hidden",
-                    objectFit: "cover",
-                    // transition:  "transform 300ms ease-in-out",
-                  }}
-                />
-                <div
-                  style={{
-                    backgroundColor: "rgb(215,230,190)",
-                    borderRadius: "10px",
-                    padding: "10px",
-                  }}
-                >
-                  <p>
-                    Leí un artículo sobre cómo 1 litro de aceite puede
-                    contaminar hasta 1.000 litros de agua... y me impactó. Desde
-                    ese día decidí no botar nunca más el aceite usado por el
-                    lavaplatos. Reciclarlo es lo mínimo que puedo hacer por el
-                    planeta.
-                  </p>
-                </div>
-              </div>
-            </span>
-
-            <div
-              style={{
-                position: "absolute",
-                top: "70px",
-                left: "55%",
-                borderRadius: "10px",
-                overflow: "hidden",
-              }}
-            >
-              <img src={oil2} alt="fondo vector" width={220} height={100} />
-            </div>
-          </div>
           {/* how can i recycle oil */}
           <section style={{ padding: "2rem" }}>
             <h2
