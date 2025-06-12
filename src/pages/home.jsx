@@ -98,14 +98,15 @@ const HomePage = () => {
                 </p>
               </motion.div>
             </div>
+           
             <button
             className="button-main"
-              
-              onClick={() => alert("Más información próximamente")}
+            
+            onClick={() => alert("Más información próximamente")}
             >
               Más información
             </button>
-          </div>
+              </div>
         </section>
         {/* Silder de abajo */}
         <section className="slider">
