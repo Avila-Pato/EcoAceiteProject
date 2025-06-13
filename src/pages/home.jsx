@@ -3,7 +3,8 @@ import hola from "../assets/hola.jpg";
 import oil from "../assets/oil.jpg"; // Import your vector image
 import oil2 from "../assets/oil2.jpg";
 import oil3 from "../assets/oil3.jpg";
-import recycle from "../assets/recycle.png"
+import recycle from "../assets/recycle.png";
+import aceiteCocina from "../assets/aceiteCocina.png";
 
 import paso1 from "../assets/pasos/paso1.png";
 import paso2 from "../assets/pasos/paso2.png";
@@ -22,14 +23,16 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 
 // eslint-disable-next-line no-unused-vars
-import { GroupAnimation, motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 import useScrollAnimation from "../utils/useScrollAnimation.js";
 
 import Navbar from "../components/navbar";
 
+import { useState } from "react";
 const HomePage = () => {
   const { ref, controls } = useScrollAnimation();
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const icon = new L.Icon({
     iconUrl: "https://cdn-icons-png.flaticon.com/512/684/684908.png",
@@ -37,15 +40,11 @@ const HomePage = () => {
     iconAnchor: [12, 41],
   });
 
-  
-
   return (
     <>
       <Navbar />
       <main className="main-page">
-        <section
-          className="main-background"
-        >
+        <section className="main-background">
           <img
             src={back}
             alt="fondo imagen"
@@ -56,18 +55,15 @@ const HomePage = () => {
               objectFit: "cover",
             }}
           />
-          <div
-          className="texto-main">
+          <div className="texto-main">
             <motion.h1
               className="popa1"
-
               style={{ marginBottom: "1rem", fontSize: "2rem" }}
               ref={ref}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: true, amount: 0.5 }}
-
             >
               Recicla tu Aceite: Protege el Medio Ambiente desde tu Cocina
             </motion.h1>
@@ -98,15 +94,14 @@ const HomePage = () => {
                 </p>
               </motion.div>
             </div>
-           
+
             <button
-            className="button-main"
-            
-            onClick={() => alert("Más información próximamente")}
+              className="button-main"
+              onClick={() => alert("Más información próximamente")}
             >
               Más información
             </button>
-              </div>
+          </div>
         </section>
         {/* Silder de abajo */}
         <section className="slider">
@@ -142,22 +137,70 @@ const HomePage = () => {
           <img src={fondo2} alt="fondo imagen" />
         </div> */}
 
-        <section
-          className="home-page"
-          style={{
-         
-          }}
-        >
-          <article
-          className="home-article"
-          >
-            <div style={{ position: 'relative' }}>
-            <ul style={{ position: 'absolute', display: "flex", flexDirection: "column", bottom: 5, gap:'3rem'}}>
-              <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram-icon lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></li>
-              <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook-icon lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></li>
-              <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter-icon lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></li>
-            </ul>
-              </div>
+        <section className="home-page" style={{}}>
+          <article className="home-article">
+            <div style={{ position: "relative" }}>
+              <ul
+                style={{
+                  position: "absolute",
+                  display: "flex",
+                  flexDirection: "column",
+                  bottom: 5,
+                  gap: "3rem",
+                }}
+              >
+                <li>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-instagram-icon lucide-instagram"
+                  >
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                  </svg>
+                </li>
+                <li>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-facebook-icon lucide-facebook"
+                  >
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                  </svg>
+                </li>
+                <li>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-twitter-icon lucide-twitter"
+                  >
+                    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+                  </svg>
+                </li>
+              </ul>
+            </div>
             {/* CONTENIDO DE TEXTO */}
             <section
               style={{
@@ -223,7 +266,7 @@ const HomePage = () => {
               }}
             >
               <div className="border-bottom">
-                  <img src={recycle} alt=""  width={80}/>
+                <img src={recycle} alt="" width={80} />
               </div>
               <img
                 src={oil}
@@ -233,7 +276,7 @@ const HomePage = () => {
                 style={{ objectFit: "cover" }}
               />
             </div>
-            
+
             <div
               style={{
                 display: "grid",
@@ -242,7 +285,6 @@ const HomePage = () => {
                 marginBottom: "12rem",
               }}
             >
-              
               {/* primera imagegn */}
               <div
                 style={{
@@ -250,15 +292,14 @@ const HomePage = () => {
                   overflow: "hidden",
                 }}
               >
-                
                 <motion.img
-                 src={oil3}
+                  src={oil3}
                   alt="fondo vector"
-                 width={300}
+                  width={300}
                   height={100}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
-                   />
+                />
               </div>
               {/* segunda imagen */}
               <div
@@ -267,41 +308,51 @@ const HomePage = () => {
                   overflow: "hidden",
                 }}
               >
-                <motion.img src={oil2} alt="fondo vector" width={220} height={100}
-                   whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }} />
+                <motion.img
+                  src={oil2}
+                  alt="fondo vector"
+                  width={220}
+                  height={100}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                />
               </div>
 
-             
-                <article
-                  style={{
-                    gridColumn: "span 2",
-                    borderRadius: "10px",
-                    padding: "1rem",
-                    display: "grid",
-                    gridTemplateColumns: "1fr",
-                    gap: "1rem",
-                    backgroundColor: "rgba(85, 142, 123, 0.19)",
-                     width: '515px'
-                    
-                  }}
-                >
-                  <p style={{ fontFamily: "cursive", fontSize: "Large", }}>
-                    Transformando el aceite usado, cuidando el planeta.
-                  </p>
+              <article
+                style={{
+                  gridColumn: "span 2",
+                  borderRadius: "10px",
+                  padding: "1rem",
+                  display: "grid",
+                  gridTemplateColumns: "1fr",
+                  gap: "1rem",
+                  backgroundColor: "rgba(85, 142, 123, 0.19)",
+                  width: "515px",
+                }}
+              >
+                <p style={{ fontFamily: "cursive", fontSize: "Large" }}>
+                  Transformando el aceite usado, cuidando el planeta.
+                </p>
 
-                  <p >
-                    Reciclar 1 litro de aceite puede evitar la contaminación de
-                    hasta 1.000 litros de agua — un acto simple con un impacto
-                    del 99.9% en la protección de nuestros recursos hídricos.
-                  </p>
-
-                  <motion.div
-                    whileHover={{ scale: 1, rotate: 1 }}
-                   style={{ display: "flex", justifyContent: "end", cursor: "pointer",
-
-                    
-                   }}>
+                <p>
+                  Reciclar 1 litro de aceite puede evitar la contaminación de
+                  hasta 1.000 litros de agua — un acto simple con un impacto del
+                  99.9% en la protección de nuestros recursos hídricos.
+                </p>
+                <div style={{ display: "flex", justifyContent: "flex-end" }}>
+                  <motion.button
+                    whileHover={{ scale: 1.3, rotate: 1 }}
+                    whileTap={{ scale: 0.9 }}
+                    style={{
+                      display: "flex",
+                      width: "50px",
+                      // backgroundColor: "red",
+                      borderRadius: '20%',
+                      justifyContent: "center",
+                      cursor: "pointer",
+                    }}
+                    onClick={() => setIsModalOpen(true)}
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -318,10 +369,44 @@ const HomePage = () => {
                       <path d="M22 22 12 12" />
                       <path d="M22 16v6h-6" />
                     </svg>
-                  </motion.div>
-                </article>
+                  </motion.button>
+                  <AnimatePresence>
+                    {isModalOpen && (
+                      <motion.div
+                        className="modal-overlay"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                      >
+                        <motion.div
+                          className="modal-box"
+                          initial={{ y: 50, opacity: 0 }}
+                          animate={{ y: 0, opacity: 1 }}
+                          exit={{ y: -50, opacity: 0 }}
+                        >
+                          <button
+                            className="close-modal"
+                            onClick={() => setIsModalOpen(false)}
+                          >
+                            Cerrar
+                          </button>
+                          <div className="modal-content">
+                            <img src={aceiteCocina} alt="" width={400} className="modal-image" />
+                            <div className="modal-text">
+                            <li>Protege el agua de la contaminación.</li>
+                            <li>Evita obstrucciones en las cañerías.</li>
+                            <li>Ayuda a producir biocombustibles.</li>
+                            <li>Contribuyes a un planeta más limpio.</li>
+                            </div>
+                          </div>
+                        </motion.div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              </article>
               {/* perfil of the person who was writing */}
-                   {/* <motion.div
+              {/* <motion.div
                 whileHover={{ scale: 1, rotate: 1 }}
                 style={{
                   gridColumn: "span 2",
@@ -374,7 +459,7 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-            {/* </motion.div> */}
+              {/* </motion.div> */}
             </div>
           </article>
 
@@ -556,7 +641,6 @@ const HomePage = () => {
 
           <MapContainer
             center={[-33.3969, -70.5744]}
-            
             zoom={13}
             style={{ height: "400px", width: "100%", marginTop: "2rem" }}
           >

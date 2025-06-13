@@ -4,6 +4,7 @@ import "./index.css";
 import "./styles/navbar.css";
 import "./styles/home-page.css";
 import "./styles/game.css"
+import "./styles/modal.css"
 import App from "./App.jsx";
 import { ErrorBoundary } from "react-error-boundary";
 import { ClerkProvider } from "@clerk/clerk-react";
