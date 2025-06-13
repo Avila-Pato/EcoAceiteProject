@@ -155,12 +155,13 @@ body {
 
 @media screen and (max-width: 768px) {
   .logo-reciclaje {
-    position: absolute;
+    display: none;
+    /* position: absolute;
     left: 50%;
     padding: 20px 10px;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(46, 125, 50);
+    box-shadow: 0 4px 12px rgba(46, 125, 50); */
     
   }
   .logo .material-icons {
@@ -171,9 +172,10 @@ body {
 .span-recycle {
   font-size: medium !important;
 }
-.logo {
+
+/* .logo {
   background-color: red;
-}
+} */
 
   
 }
