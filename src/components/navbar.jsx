@@ -11,8 +11,9 @@ const Navbar = () => {
   return (
     <>
 
-      <nav className="navbar" role="navigation" aria-label="Main navigation" style= {{ position: "relative" }}>
-        <div className="logo" aria-label="OilRecycle logo">
+      <nav className="navbar" role="navigation" aria-label="Main navigation" style= {{ 
+        position: "relative", }}>
+        <div className="logo" aria-label="OilRecycle logo" >
           <img src={logo} alt="fondo vector" style={{ inlineSize: " 50px" }} />
           <span
             className="material-icons"
@@ -24,7 +25,7 @@ const Navbar = () => {
           </span>
           <div className="logo-reciclaje"> 
              <div className="logos-social" style={{ display: "flex", alignItems: "center", color: "white", fontWeight: "bold" }}>
-          ♻ <span style={{ marginLeft: "8px", fontSize: "20px"}}>Recicla</span>
+          ♻ <span className="span-recycle" style={{ marginLeft: "8px", fontSize: "20px"}}>Recicla</span>
         </div>
         
         </div>

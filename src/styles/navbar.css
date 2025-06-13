@@ -54,13 +54,6 @@ ul {
   transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
-.game-button:hover,
-.game-button:focus {
-  background: linear-gradient(to bottom, #ffe066, #cc9900);
-  transform: translateY(2px);
-  box-shadow: 0 2px 0 #663300;
-}
-
 .home-button {
   font-weight: bold;
   font-size: 1.05rem;
@@ -73,6 +66,17 @@ ul {
   text-shadow: 0 1px 1px #ffffffaa;
   transition: all 0.2s ease;
 }
+
+
+
+.game-button:hover,
+.game-button:focus {
+  background: linear-gradient(to bottom, #ffe066, #cc9900);
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #663300;
+}
+
+
 
 .home-button:hover,
 .home-button:focus {
@@ -149,10 +153,35 @@ body {
   box-shadow: 0 4px 12px rgba(46, 125, 50);
 }
 
+@media screen and (max-width: 768px) {
+  .logo-reciclaje {
+    position: absolute;
+    left: 50%;
+    padding: 20px 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(46, 125, 50);
+    
+  }
+  .logo .material-icons {
+  font-size: larger !important;
+
+}
+
+.span-recycle {
+  font-size: medium !important;
+}
+.logo {
+  background-color: red;
+}
+
+  
+}
+
 .logo .material-icons {
+  margin-right: 70px;
   font-size: 2.1rem;
   color: var(--color-secondary);
-  background-color: "red";
 }
 
 .nav-links {
@@ -204,29 +233,45 @@ body {
     top: 60px;
     left: 0;
     right: 0;
-    background: var(--color-bg);
+    background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-secondary) 100%);
     backdrop-filter: saturate(180%) blur(10px);
     flex-direction: column;
-    gap: 0;
+    align-items: center;
+    gap: 1rem;
     max-height: 0;
     overflow: hidden;
-    border-top: 1.5px solid var(--color-secondary);
-    box-shadow: 0 4px 16px rgba(46, 125, 50, 0.15);
-    transition: max-height 0.3s ease;
+    border-top: 2px solid var(--color-secondary);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    z-index: -1;
   }
 
   .nav-links.open {
-    max-height: 300px;
+    max-height: 220px;
+    padding: 20px 0;
   }
 
   .nav-links li {
-    padding: 14px 20px;
-    border-bottom: 1px solid var(--color-secondary);
-    width: 100%;
+    width: 60%;
+    text-align: center;
+    list-style: none;
+    padding: 12px 0;
+    transform: translate(-70px);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background 0.3s ease;
+  }
+
+  .nav-links li:hover {
+    background: rgba(255, 255, 255, 0.2);
   }
 
   .menu-button {
     display: block;
+    transform: scale(0.7);
   }
 
   .user-button-wrapper {
