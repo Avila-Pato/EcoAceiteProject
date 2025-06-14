@@ -49,7 +49,7 @@ const HomePage = () => {
             src={back}
             alt="fondo imagen"
             style={{
-              width: "fit-content",
+              width: "100%",
               height: "auto",
               maxHeight: "700px",
               objectFit: "cover",
@@ -240,6 +240,7 @@ const HomePage = () => {
                   padding: "12px 24px",
                   fontSize: "1rem",
                   cursor: "pointer",
+                  marginTop: "1rem",
                   transition: "background-color 0.3s ease",
                 }}
                 onClick={() => alert("Más información próximamente")}
@@ -449,6 +450,7 @@ const HomePage = () => {
                       borderRadius: "50%",
                       overflow: "hidden",
                       objectFit: "cover",
+                      marginTop: "10px",
                       width: "50px",
                       height: "50px",
 
