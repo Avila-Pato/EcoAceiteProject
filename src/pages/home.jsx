@@ -322,7 +322,7 @@ const HomePage = () => {
                 <motion.img
                   src={oil2}
                   alt="fondo vector"
-                  width={220}
+                  width={300}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 />

@@ -106,9 +106,12 @@
   word-wrap: break-word;
   font-size: smaller !important;
 } 
+
 .image-oil {
   display: none;
 }
+
+
 
 
 @media  (max-width: 750px ) {
@@ -247,4 +250,9 @@
   font-weight: 500;
   font-size: 1rem;
   color: #333;
+}
+@media (max-width: 1060px) {
+.image-oil {
+  display: none;
+}
 }
