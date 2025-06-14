@@ -143,9 +143,8 @@ const HomePage = () => {
               <ul
                 style={{
                   position: "absolute",
-                  display: "flex",
                   flexDirection: "column",
-                  bottom: 5,
+                  bottom: "0",
                   gap: "3rem",
                 }}
               >
