@@ -289,9 +289,9 @@ const HomePage = () => {
 
             <div
               style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: "1rem",
+                marginTop: "2rem",
+                gridTemplateRows: "span 2 ",
+                
               }}
             >
               {/* primera imagegn */}
@@ -305,7 +305,6 @@ const HomePage = () => {
                   src={oil3}
                   alt="fondo vector"
                   width={300}
-                  height={100}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 />
@@ -313,7 +312,10 @@ const HomePage = () => {
               {/* segunda imagen */}
               <div
                 style={{
+                  gridColumn: "span 2",
                   borderRadius: "10px",
+                  marginTop: "1rem",
+                  marginBottom: "1rem",
                   overflow: "hidden",
                 }}
               >
@@ -321,7 +323,6 @@ const HomePage = () => {
                   src={oil2}
                   alt="fondo vector"
                   width={220}
-                  height={100}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 />
@@ -332,8 +333,6 @@ const HomePage = () => {
                   gridColumn: "span 2",
                   borderRadius: "10px",
                   padding: "1rem",
-                  display: "grid",
-                  gridTemplateColumns: "1fr",
                   gap: "1rem",
                   backgroundColor: "rgba(85, 142, 123, 0.19)",
                   width: "fit-content",
