@@ -109,14 +109,18 @@
 .image-oil {
   display: none;
 }
-.home-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 140%;
-  gap: 2rem;
-}
+
+
+@media  (max-width: 750px ) {
+  .home-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 140%;
+    gap: 2rem;
+  }
+} 
 .home-article {
   width: 100%;
   flex-direction: column;
@@ -124,11 +128,13 @@
 .home-main-text {
   margin-bottom: 0 !important;
 }
-/* .home-article-content,
-.home-article-list {
-  
-} */
+.home-list {
+  flex-direction: row !important;
+  justify-content: center;
+  gap: 1rem;
 }
+} 
+
 .popa {
   font-family: 'Alegreya', serif;
   font-weight: 500;

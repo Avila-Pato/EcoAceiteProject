@@ -141,12 +141,14 @@ const HomePage = () => {
           <article className="home-article">
             <div  className="home-article-content" style={{ position: "relative" }}>
               <ul
-                className="home-article-list"
+              className="home-list"
                 style={{
                   position: "absolute",
                   flexDirection: "column",
                   bottom: "0",
                   gap: "3rem",
+                  cursor: "pointer",
+                  
                 }}
               >
                 <li>
