@@ -49,7 +49,7 @@ const HomePage = () => {
             src={back}
             alt="fondo imagen"
             style={{
-              width: "100%",
+              width: "fit-content",
               height: "auto",
               maxHeight: "700px",
               objectFit: "cover",
@@ -205,7 +205,7 @@ const HomePage = () => {
               style={{
                 textAlign: "center",
                 marginBottom: "10rem",
-                maxWidth: "300px",
+                maxWidth: "fit-content",
               }}
             >
               <h2 style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>
@@ -323,7 +323,7 @@ const HomePage = () => {
                   gridTemplateColumns: "1fr",
                   gap: "1rem",
                   backgroundColor: "rgba(85, 142, 123, 0.19)",
-                  width: "515px",
+                  width: "fit-content",
                 }}
               >
                 <p style={{ fontFamily: "cursive", fontSize: "Large" }}>
@@ -341,7 +341,7 @@ const HomePage = () => {
                     whileTap={{ scale: 0.9 }}
                     style={{
                       display: "flex",
-                      width: "50px",
+                      width: "fit-content",
                       // backgroundColor: "red",
                       borderRadius: '20%',
                       justifyContent: "center",
@@ -423,21 +423,11 @@ const HomePage = () => {
                 <div
                   style={{
                     display: "flex",
-                    maxWidth: "515px",
+                    width: "fit-content",
                     marginLeft: "2px",
                   }}
                 >
-                  <img
-                    src={hola}
-                    alt="imagen persona"
-                    style={{
-                      borderRadius: "50%",
-                      overflow: "hidden",
-                      objectFit: "cover",
-
-                      // transition:  "transform 300ms ease-in-out",
-                    }}
-                  />
+                  
                   <div
                     style={{
                       backgroundColor: "rgb(215,230,190)",
@@ -452,8 +442,23 @@ const HomePage = () => {
                       por el lavaplatos. Reciclarlo es lo mínimo que puedo hacer
                       por el planeta.
                     </p>
+                    <img
+                    src={hola}
+                    alt="imagen persona"
+                    style={{
+                      borderRadius: "50%",
+                      overflow: "hidden",
+                      objectFit: "cover",
+                      width: "50px",
+                      height: "50px",
+
+                      // transition:  "transform 300ms ease-in-out",
+                    }}
+                  />
                   </div>
+                  
                 </div>
+                
               </div>
               {/* </motion.div> */}
             </div>
