@@ -170,7 +170,6 @@
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
-  margin-bottom: 3rem;
 }
 
 .title-home {
@@ -178,7 +177,6 @@
   font-weight: 700;
   font-size: 2.5rem;
   color: #2d8149;
-  margin-bottom: 1.5rem;
   text-align: center;
 }
 
@@ -187,7 +185,6 @@
   font-weight: 600;
   font-size: 1.5rem;
   color: #444;
-  margin-bottom: 2rem;
   text-align: center;
 }
 
@@ -195,7 +192,6 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1rem;
-  margin-bottom: 6rem;
 }
 
 .home__card {
@@ -209,7 +205,6 @@
 }
 
 .home__card img {
-  margin-bottom: 1rem;
   transition: transform 0.3s ease;
 }
 

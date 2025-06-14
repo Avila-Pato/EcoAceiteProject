@@ -238,7 +238,6 @@ const HomePage = () => {
                   color: "#fff",
                   border: "none",
                   borderRadius: "8px",
-                  marginTop: "20px",
                   padding: "12px 24px",
                   fontSize: "1rem",
                   cursor: "pointer",
@@ -262,7 +261,6 @@ const HomePage = () => {
                 flexShrink: 0,
                 overflow: "hidden",
                 borderRadius: "10px",
-                marginBottom: "10rem",
               }}
             >
               <div className="border-bottom">
@@ -282,7 +280,6 @@ const HomePage = () => {
                 display: "grid",
                 gridTemplateColumns: "1fr 1fr",
                 gap: "1rem",
-                marginBottom: "12rem",
               }}
             >
               {/* primera imagegn */}
