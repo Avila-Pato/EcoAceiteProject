@@ -344,7 +344,7 @@ const HomePage = () => {
                       display: "flex",
                       width: "fit-content",
                       // backgroundColor: "red",
-                      borderRadius: '20%',
+                      borderRadius: "20%",
                       justifyContent: "center",
                       cursor: "pointer",
                     }}
@@ -388,12 +388,17 @@ const HomePage = () => {
                             Cerrar
                           </button>
                           <div className="modal-content">
-                            <img src={aceiteCocina} alt="" width={400} className="modal-image" />
+                            <img
+                              src={aceiteCocina}
+                              alt=""
+                              width={400}
+                              className="modal-image"
+                            />
                             <div className="modal-text">
-                            <li>Protege el agua de la contaminación.</li>
-                            <li>Evita obstrucciones en las cañerías.</li>
-                            <li>Ayuda a producir biocombustibles.</li>
-                            <li>Contribuyes a un planeta más limpio.</li>
+                              <li>Protege el agua de la contaminación.</li>
+                              <li>Evita obstrucciones en las cañerías.</li>
+                              <li>Ayuda a producir biocombustibles.</li>
+                              <li>Contribuyes a un planeta más limpio.</li>
                             </div>
                           </div>
                         </motion.div>
@@ -428,7 +433,6 @@ const HomePage = () => {
                     marginLeft: "2px",
                   }}
                 >
-                  
                   <div
                     style={{
                       backgroundColor: "rgb(215,230,190)",
@@ -443,24 +447,27 @@ const HomePage = () => {
                       por el lavaplatos. Reciclarlo es lo mínimo que puedo hacer
                       por el planeta.
                     </p>
-                    <img
-                    src={hola}
-                    alt="imagen persona"
-                    style={{
-                      borderRadius: "50%",
-                      overflow: "hidden",
-                      objectFit: "cover",
-                      marginTop: "10px",
-                      width: "50px",
-                      height: "50px",
-
-                      // transition:  "transform 300ms ease-in-out",
-                    }}
-                  />
+                    <div
+                      style={{ display: "flex", justifyContent: "flex-end" }}
+                    >
+                      
+                      <img
+                        src={hola}
+                        alt="imagen persona"
+                        style={{
+                          borderRadius: "50%",
+                          overflow: "hidden",
+                          objectFit: "cover",
+                          marginTop: "10px",
+                          width: "50px",
+                          height: "50px",
+                          // transition:  "transform 300ms ease-in-out",
+                        }}
+                      />
+                     
+                    </div>
                   </div>
-                  
                 </div>
-                
               </div>
               {/* </motion.div> */}
             </div>
