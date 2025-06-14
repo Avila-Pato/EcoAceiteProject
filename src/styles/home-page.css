@@ -105,7 +105,29 @@
   font-size: medium !important;
   word-wrap: break-word;
   font-size: smaller !important;
+} 
+.image-oil {
+  display: none;
 }
+.home-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 140%;
+  gap: 2rem;
+}
+.home-article {
+  width: 100%;
+  flex-direction: column;
+}
+.home-main-text {
+  margin-bottom: 0 !important;
+}
+/* .home-article-content,
+.home-article-list {
+  
+} */
 }
 .popa {
   font-family: 'Alegreya', serif;
