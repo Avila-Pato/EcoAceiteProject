@@ -251,7 +251,6 @@ const HomePage = () => {
                   padding: "12px 24px",
                   fontSize: "1rem",
                   cursor: "pointer",
-                  marginTop: "1rem",
                   transition: "background-color 0.3s ease",
                 }}
                 onClick={() => alert("Más información próximamente")}
@@ -289,7 +288,6 @@ const HomePage = () => {
 
             <div
               style={{
-                marginTop: "2rem",
                 gridTemplateRows: "span 2 ",
                 
               }}
@@ -440,9 +438,6 @@ const HomePage = () => {
               >
                 <div
                   style={{
-                    display: "flex",
-                    width: "fit-content",
-                    marginLeft: "2px",
                   }}
                 >
                   <div
