@@ -139,16 +139,18 @@ const HomePage = () => {
 
         <section className="home-page" style={{}}>
           <article className="home-article">
-            <div  className="home-article-content" style={{ position: "relative" }}>
+            <div
+              className="home-article-content"
+              style={{ position: "relative" }}
+            >
               <ul
-              className="home-list"
+                className="home-list"
                 style={{
                   position: "absolute",
                   flexDirection: "column",
                   bottom: "0",
                   gap: "3rem",
                   cursor: "pointer",
-                  
                 }}
               >
                 <li>
@@ -203,220 +205,230 @@ const HomePage = () => {
                   >
                     <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
                   </svg>
-
                 </li>
               </ul>
             </div>
             {/* CONTENIDO DE TEXTO */}
             <div className="home-text">
-
-          
-            <section
-              className="home-main-text"
-              style={{
-                textAlign: "center",
-                marginBottom: "10rem",
-                maxWidth: "fit-content",
-              }}
-            >
-              <h2 style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>
-                Marcas que se suman al cambio
-              </h2>
-              <p
+              <section
+                className="home-main-text"
                 style={{
-                  fontSize: "1.125rem",
-                  color: "#333",
-                  marginBottom: "1rem",
+                  textAlign: "center",
+                  marginBottom: "10rem",
+                  maxWidth: "fit-content",
                 }}
               >
-                Sé parte del cambio: descubre cómo el reciclaje de aceite usado
-                puede convertir nuestras ciudades en espacios más verdes,
-                limpios y sostenibles.
-              </p>
-              <span
-                style={{
-                  fontWeight: "bold",
-                  color: "#00796b",
-                }}
-              >
-                Del aceite usado al cambio verde: transformando ciudades
-              </span>
-              <br />
-              <button
-                style={{
-                  backgroundColor: "#00796b",
-                  color: "#fff",
-                  border: "none",
-                  borderRadius: "8px",
-                  padding: "12px 24px",
-                  fontSize: "1rem",
-                  cursor: "pointer",
-                  transition: "background-color 0.3s ease",
-                }}
-                onClick={() => alert("Más información próximamente")}
-                onMouseOver={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#005f56")
-                }
-                onMouseOut={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#00796b")
-                }
-              >
-                Explorar iniciativas
-              </button>
-            </section>
+                <h2 style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>
+                  Marcas que se suman al cambio
+                </h2>
+                <p
+                  style={{
+                    fontSize: "1.125rem",
+                    color: "#333",
+                    marginBottom: "1rem",
+                  }}
+                >
+                  Sé parte del cambio: descubre cómo el reciclaje de aceite
+                  usado puede convertir nuestras ciudades en espacios más
+                  verdes, limpios y sostenibles.
+                </p>
+                <span
+                  style={{
+                    fontWeight: "bold",
+                    color: "#00796b",
+                  }}
+                >
+                  Del aceite usado al cambio verde: transformando ciudades
+                </span>
+                <br />
+                <button
+                  style={{
+                    backgroundColor: "#00796b",
+                    color: "#fff",
+                    border: "none",
+                    borderRadius: "8px",
+                    padding: "12px 24px",
+                    fontSize: "1rem",
+                    cursor: "pointer",
+                    transition: "background-color 0.3s ease",
+                  }}
+                  onClick={() => alert("Más información próximamente")}
+                  onMouseOver={(e) =>
+                    (e.currentTarget.style.backgroundColor = "#005f56")
+                  }
+                  onMouseOut={(e) =>
+                    (e.currentTarget.style.backgroundColor = "#00796b")
+                  }
+                >
+                  Explorar iniciativas
+                </button>
+              </section>
 
-            {/* IMAGEN */}
-            <div
-              className="image-oil"
-              style={{
-                flexShrink: 0,
-                overflow: "hidden",
-                borderRadius: "10px",
-              }}
-            >
-              <div className="border-bottom">
-                <img src={recycle} alt="" width={80} />
-              </div>
-              <img
-                src={oil}
-                alt="fondo vector"
-                width={300}
-                height={500}
-                style={{ objectFit: "cover" }}
-              />
-            </div>
-
-            <div
-              style={{
-                gridTemplateRows: "span 2 ",
-                
-              }}
-            >
-              {/* primera imagegn */}
+              {/* IMAGEN */}
               <div
+                className="image-oil"
                 style={{
-                  borderRadius: "10px",
+                  flexShrink: 0,
                   overflow: "hidden",
+                  borderRadius: "10px",
                 }}
               >
-                <motion.img
-                  src={oil3}
+                <div className="border-bottom">
+                  <img src={recycle} alt="" width={80} />
+                </div>
+                <img
+                  src={oil}
                   alt="fondo vector"
                   width={300}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                />
-              </div>
-              {/* segunda imagen */}
-              <div
-                style={{
-                  gridColumn: "span 2",
-                  borderRadius: "10px",
-                  marginTop: "1rem",
-                  marginBottom: "1rem",
-                  overflow: "hidden",
-                }}
-              >
-                <motion.img
-                  src={oil2}
-                  alt="fondo vector"
-                  width={300}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
+                  height={500}
+                  style={{ objectFit: "cover" }}
                 />
               </div>
 
-              <article
+              <div
                 style={{
-                  gridColumn: "span 2",
-                  borderRadius: "10px",
-                  padding: "1rem",
-                  gap: "1rem",
-                  backgroundColor: "rgba(85, 142, 123, 0.19)",
-                  width: "fit-content",
+                  gridTemplateRows: "span 2 ",
                 }}
               >
-                <p style={{ fontFamily: "cursive", fontSize: "Large" }}>
-                  Transformando el aceite usado, cuidando el planeta.
-                </p>
-
-                <p>
-                  Reciclar 1 litro de aceite puede evitar la contaminación de
-                  hasta 1.000 litros de agua — un acto simple con un impacto del
-                  99.9% en la protección de nuestros recursos hídricos.
-                </p>
-                <div style={{ display: "flex", justifyContent: "flex-end" }}>
-                  <motion.button
-                    whileHover={{ scale: 1.3, rotate: 1 }}
-                    whileTap={{ scale: 0.9 }}
+                {/* primera imagegn */}
+                <div
+                  style={{
+                    borderRadius: "10px",
+                    overflow: "hidden",
+                    width: "100%", // Que tome el 100% del contenedor padre
+                    maxWidth: "500px", // Tamaño máximo que puedes ajustar a lo que prefieras
+                  }}
+                >
+                  <motion.img
+                    src={oil3}
+                    alt="fondo vector"
+                    width={300}
                     style={{
-                      display: "flex",
-                      width: "fit-content",
-                      // backgroundColor: "red",
-                      borderRadius: "20%",
-                      justifyContent: "center",
-                      cursor: "pointer",
+                      width: "100%", // Imagen se adapta al ancho del div
+                      height: "auto", // Mantiene la proporción
+                      display: "block", // Elimina espacios blancos debajo de la imagen
                     }}
-                    onClick={() => setIsModalOpen(true)}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="lucide lucide-circle-arrow-out-down-right-icon lucide-circle-arrow-out-down-right"
+
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  />
+                </div>
+                {/* segunda imagen */}
+                <div
+                  style={{
+                    gridColumn: "span 2",
+                    borderRadius: "10px",
+                    marginTop: "1rem",
+                    marginBottom: "1rem",
+                    overflow: "hidden",
+                    width: "100%", // Que tome el 100% del contenedor padre
+                    maxWidth: "500px", // Tamaño máximo que puedes ajustar a lo que prefieras
+                  }}
+                >
+                  <motion.img
+                    src={oil2}
+                    alt="fondo vector"
+                    style={{
+                      width: "100%", // Imagen se adapta al ancho del div
+                      height: "auto", // Mantiene la proporción
+                      display: "block", // Elimina espacios blancos debajo de la imagen
+                    }}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  />
+                </div>
+
+                <article
+                  style={{
+                    gridColumn: "span 2",
+                    borderRadius: "10px",
+                    padding: "1rem",
+                    gap: "1rem",
+                    backgroundColor: "rgba(85, 142, 123, 0.19)",
+                    width: "fit-content",
+                  }}
+                >
+                  <p style={{ fontFamily: "cursive", fontSize: "Large" }}>
+                    Transformando el aceite usado, cuidando el planeta.
+                  </p>
+
+                  <p>
+                    Reciclar 1 litro de aceite puede evitar la contaminación de
+                    hasta 1.000 litros de agua — un acto simple con un impacto
+                    del 99.9% en la protección de nuestros recursos hídricos.
+                  </p>
+                  <div style={{ display: "flex", justifyContent: "flex-end" }}>
+                    <motion.button
+                      whileHover={{ scale: 1.3, rotate: 1 }}
+                      whileTap={{ scale: 0.9 }}
+                      style={{
+                        display: "flex",
+                        width: "fit-content",
+                        // backgroundColor: "red",
+                        borderRadius: "20%",
+                        justifyContent: "center",
+                        cursor: "pointer",
+                      }}
+                      onClick={() => setIsModalOpen(true)}
                     >
-                      <path d="M12 22a10 10 0 1 1 10-10" />
-                      <path d="M22 22 12 12" />
-                      <path d="M22 16v6h-6" />
-                    </svg>
-                  </motion.button>
-                  <AnimatePresence>
-                    {isModalOpen && (
-                      <motion.div
-                        className="modal-overlay"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="lucide lucide-circle-arrow-out-down-right-icon lucide-circle-arrow-out-down-right"
                       >
+                        <path d="M12 22a10 10 0 1 1 10-10" />
+                        <path d="M22 22 12 12" />
+                        <path d="M22 16v6h-6" />
+                      </svg>
+                    </motion.button>
+                    <AnimatePresence>
+                      {isModalOpen && (
                         <motion.div
-                          className="modal-box"
-                          initial={{ y: 50, opacity: 0 }}
-                          animate={{ y: 0, opacity: 1 }}
-                          exit={{ y: -50, opacity: 0 }}
+                          className="modal-overlay"
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
                         >
-                          <button
-                            className="close-modal"
-                            onClick={() => setIsModalOpen(false)}
+                          <motion.div
+                            className="modal-box"
+                            initial={{ y: 50, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            exit={{ y: -50, opacity: 0 }}
                           >
-                            Cerrar
-                          </button>
-                          <div className="modal-content">
-                            <img
-                              src={aceiteCocina}
-                              alt=""
-                              width={400}
-                              className="modal-image"
-                            />
-                            <div className="modal-text">
-                              <li>Protege el agua de la contaminación.</li>
-                              <li>Evita obstrucciones en las cañerías.</li>
-                              <li>Ayuda a producir biocombustibles.</li>
-                              <li>Contribuyes a un planeta más limpio.</li>
+                            <button
+                              className="close-modal"
+                              onClick={() => setIsModalOpen(false)}
+                            >
+                              Cerrar
+                            </button>
+                            <div className="modal-content">
+                              <img
+                                src={aceiteCocina}
+                                alt=""
+                                width={400}
+                                className="modal-image"
+                              />
+                              <div className="modal-text">
+                                <li>Protege el agua de la contaminación.</li>
+                                <li>Evita obstrucciones en las cañerías.</li>
+                                <li>Ayuda a producir biocombustibles.</li>
+                                <li>Contribuyes a un planeta más limpio.</li>
+                              </div>
                             </div>
-                          </div>
+                          </motion.div>
                         </motion.div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              </article>
-                </div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                </article>
+              </div>
               {/* perfil of the person who was writing */}
               {/* <motion.div
                 whileHover={{ scale: 1, rotate: 1 }}
@@ -436,10 +448,7 @@ const HomePage = () => {
                   gridTemplateColumns: "1fr",
                 }}
               >
-                <div
-                  style={{
-                  }}
-                >
+                <div style={{}}>
                   <div
                     style={{
                       backgroundColor: "rgb(215,230,190)",
@@ -457,7 +466,6 @@ const HomePage = () => {
                     <div
                       style={{ display: "flex", justifyContent: "flex-end" }}
                     >
-                      
                       <img
                         src={hola}
                         alt="imagen persona"
@@ -471,7 +479,6 @@ const HomePage = () => {
                           // transition:  "transform 300ms ease-in-out",
                         }}
                       />
-                     
                     </div>
                   </div>
                 </div>
