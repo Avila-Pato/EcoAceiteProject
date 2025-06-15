@@ -479,9 +479,54 @@ const HomePage = () => {
                           // transition:  "transform 300ms ease-in-out",
                         }}
                       />
+                      
+                    </div>
+                  </div>
+                  <div style={{  width: "100%", maxWidth: "550px", marginTop: "1rem"  }} >
+                    <img src={oil3} alt=""  
+                    style={{  width: "100%", maxWidth: "100%", height: "auto", 
+                    display: "block", borderRadius: "10px"   }} />
+                  </div>
+                  
+                  <div>
+                  </div>
+                </div>
+                <div style={{}}>
+                  <div
+                    style={{
+                      backgroundColor: "rgb(215,230,190)",
+                      borderRadius: "10px",
+                      padding: "10px",
+                      marginBottom: "5rem",
+                    }}
+                  >
+                    <p>
+                      Leí un artículo sobre cómo 1 litro de aceite puede
+                      contaminar hasta 1.000 litros de agua... y me impactó.
+                      Desde ese día decidí no botar nunca más el aceite usado
+                      por el lavaplatos. Reciclarlo es lo mínimo que puedo hacer
+                      por el planeta.
+                    </p>
+                    <div
+                      style={{ display: "flex", justifyContent: "flex-end" }}
+                    >
+                      <img
+                        src={hola}
+                        alt="imagen persona"
+                        style={{
+                          borderRadius: "50%",
+                          overflow: "hidden",
+                          objectFit: "cover",
+                          marginTop: "10px",
+                          width: "50px",
+                          height: "50px",
+                          // transition:  "transform 300ms ease-in-out",
+                        }}
+                      />
                     </div>
                   </div>
                 </div>
+                
               </div>
               {/* </motion.div> */}
             </div>
