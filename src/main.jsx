@@ -8,7 +8,6 @@ import "./styles/modal.css"
 import App from "./App.jsx";
 import { ErrorBoundary } from "react-error-boundary";
 import { ClerkProvider } from "@clerk/clerk-react";
-import { AuthProvider } from "./context/AuthContext.jsx";
 import { BrowserRouter } from "react-router-dom";
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
@@ -19,7 +18,6 @@ if (!PUBLISHABLE_KEY) {
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <AuthProvider>
       <BrowserRouter>
         <ErrorBoundary fallback={<div style={{ colord: 'red', fontSize: 'bolder', textAlign: 'center', }}>Algo ha salido mal</div>}>
           <ClerkProvider
@@ -31,6 +29,5 @@ createRoot(document.getElementById("root")).render(
           </ClerkProvider>
         </ErrorBoundary>
       </BrowserRouter>
-    </AuthProvider>
   </StrictMode>
 );

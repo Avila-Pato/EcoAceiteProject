@@ -1,5 +1,7 @@
 // import fondo2 from "../assets/fondo2.jpg"; // Import your background image
 import hola from "../assets/hola.jpg";
+import persona2 from "../assets/persona2.jpg";
+
 import oil from "../assets/oil.jpg"; // Import your vector image
 import oil2 from "../assets/oil2.jpg";
 import oil3 from "../assets/oil3.jpg";
@@ -308,7 +310,6 @@ const HomePage = () => {
                       height: "auto", // Mantiene la proporción
                       display: "block", // Elimina espacios blancos debajo de la imagen
                     }}
-
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   />
@@ -467,7 +468,7 @@ const HomePage = () => {
                       style={{ display: "flex", justifyContent: "flex-end" }}
                     >
                       <img
-                        src={hola}
+                        src={persona2}
                         alt="imagen persona"
                         style={{
                           borderRadius: "50%",
@@ -479,17 +480,29 @@ const HomePage = () => {
                           // transition:  "transform 300ms ease-in-out",
                         }}
                       />
-                      
                     </div>
                   </div>
-                  <div style={{  width: "100%", maxWidth: "550px", marginTop: "1rem"  }} >
-                    <img src={oil3} alt=""  
-                    style={{  width: "100%", maxWidth: "100%", height: "auto", 
-                    display: "block", borderRadius: "10px"   }} />
+                  <div
+                    style={{
+                      width: "100%",
+                      maxWidth: "550px",
+                      marginTop: "1rem",
+                    }}
+                  >
+                    <img
+                      src={oil3}
+                      alt=""
+                      style={{
+                        width: "100%",
+                        maxWidth: "100%",
+                        height: "auto",
+                        display: "block",
+                        borderRadius: "10px",
+                      }}
+                    />
                   </div>
-                  
-                  <div>
-                  </div>
+
+                  <div></div>
                 </div>
                 <div style={{}}>
                   <div
@@ -501,11 +514,11 @@ const HomePage = () => {
                     }}
                   >
                     <p>
-                      Leí un artículo sobre cómo 1 litro de aceite puede
-                      contaminar hasta 1.000 litros de agua... y me impactó.
-                      Desde ese día decidí no botar nunca más el aceite usado
-                      por el lavaplatos. Reciclarlo es lo mínimo que puedo hacer
-                      por el planeta.
+                      Me hace reflexionar sobre el reciclaje profundamente. 
+                      este articulo ,tomé la decisión de nunca más desechar el aceite
+                      usado por el desagüe. Ahora procuro reciclarlo, porque
+                      considero que es un pequeño gesto que contribuye al
+                      cuidado del medio ambiente
                     </p>
                     <div
                       style={{ display: "flex", justifyContent: "flex-end" }}
@@ -526,7 +539,6 @@ const HomePage = () => {
                     </div>
                   </div>
                 </div>
-                
               </div>
               {/* </motion.div> */}
             </div>
