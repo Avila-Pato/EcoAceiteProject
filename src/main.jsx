@@ -9,6 +9,7 @@ import App from "./App.jsx";
 import { ErrorBoundary } from "react-error-boundary";
 import { ClerkProvider } from "@clerk/clerk-react";
 import { BrowserRouter } from "react-router-dom";
+import { AuthProvider } from "./context/AuthContext.jsx";
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
@@ -25,7 +26,9 @@ createRoot(document.getElementById("root")).render(
             signInForceRedirectUrl={"/home"}
             signUpForceRedirectUrl={"/home"}
           >
+            <AuthProvider >
             <App />
+            </AuthProvider>
           </ClerkProvider>
         </ErrorBoundary>
       </BrowserRouter>
