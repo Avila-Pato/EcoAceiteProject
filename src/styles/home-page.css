@@ -20,6 +20,11 @@
   position: relative;
   text-align: center;
   color: black;
+
+}
+
+.hola {
+      position: relative;
 }
 
 .imagen-main {
@@ -273,6 +278,7 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 2fr));
   gap: 1rem;
 }
+
 
 .home__card {
   background-color: #f9f9f9;

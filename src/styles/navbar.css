@@ -283,7 +283,6 @@ body {
 .slider {
   overflow: hidden;
   background: #fff;
-  padding: 20px 0;
 }
 
 .slider-track {
@@ -291,6 +290,7 @@ body {
   width: calc(250px * 3); /* ancho por cantidad de logos */
   animation: scroll 10s linear infinite;
 }
+
 
 .slide {
   width: 250px;

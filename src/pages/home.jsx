@@ -4,6 +4,8 @@ import persona2 from "../assets/persona2.jpg";
 
 
 import mainPerson from "../assets/mainImage/1.jpg";
+import mainPerson2 from "../assets/mainImage/2.jpg";
+import recyceContainer from "../assets/mainImage/3.jpeg"
 
 import oil from "../assets/oil.jpg"; // Import your vector image
 import oil2 from "../assets/oil2.jpg";
@@ -65,8 +67,8 @@ const HomePage = () => {
               maxHeight: "700px",
               objectFit: "cover",
             }}
-          />
-          <div className="texto-main">
+            />
+          <div className="texto-main" style={{ marginTop: "2rem" }}>
             <motion.h1
               className="popa1"
               style={{ marginBottom: "1rem", fontSize: "2rem" }}
@@ -110,14 +112,14 @@ const HomePage = () => {
             
         <motion.div
         ref={ref}
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: -260 }}
         whileInView={{ opacity: 1,  y: -260 }}
         transition={{ duration: 0.8, ease: "easeIn" }}
         viewport={{ once: true, amount: 0.5 }}
         className="imagen-main" >
           <img src={mainPerson} alt="" width={200} height={300}  style={{ borderRadius: "30px", marginTop: "3rem" }}   />
-                    <img src={mainPerson} alt="" width={200} height={300} style={{ borderRadius: "30px" }} />
-          <img src={mainPerson} alt="" width={200} height={300}  style={{ borderRadius: "30px", marginTop: "2rem" }}/>
+                    <img src={mainPerson2} alt="" width={200} height={300} style={{ borderRadius: "30px" }} />
+          <img src={recyceContainer} alt="" width={200} height={300}  style={{ borderRadius: "30px", marginTop: "2rem" }}/>
         </motion.div>
 
               <motion.div
