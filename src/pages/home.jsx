@@ -2,6 +2,9 @@
 import hola from "../assets/hola.jpg";
 import persona2 from "../assets/persona2.jpg";
 
+
+import mainPerson from "../assets/mainImage/1.jpg";
+
 import oil from "../assets/oil.jpg"; // Import your vector image
 import oil2 from "../assets/oil2.jpg";
 import oil3 from "../assets/oil3.jpg";
@@ -24,6 +27,8 @@ import { markers } from "../data/recyclingPoint.js";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 
+import video from "../assets/video/video.mp4"
+
 // eslint-disable-next-line no-unused-vars
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -34,7 +39,11 @@ import Navbar from "../components/navbar";
 import { useState } from "react";
 const HomePage = () => {
   const { ref, controls } = useScrollAnimation();
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(null);
+
+  const  opnenModal1 = () => setIsModalOpen("modal1")
+  const  opnenModal2 = () => setIsModalOpen("modal2")
+
 
   const icon = new L.Icon({
     iconUrl: "https://cdn-icons-png.flaticon.com/512/684/684908.png",
@@ -95,7 +104,22 @@ const HomePage = () => {
                   impacto!
                 </p>
               </motion.div>
+              
             </div>
+
+            
+        <motion.div
+        ref={ref}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1,  y: -260 }}
+        transition={{ duration: 0.8, ease: "easeIn" }}
+        viewport={{ once: true, amount: 0.5 }}
+        className="imagen-main" >
+          <img src={mainPerson} alt="" width={200} height={300}  style={{ borderRadius: "30px", marginTop: "3rem" }}   />
+                    <img src={mainPerson} alt="" width={200} height={300} style={{ borderRadius: "30px" }} />
+          <img src={mainPerson} alt="" width={200} height={300}  style={{ borderRadius: "30px", marginTop: "2rem" }}/>
+        </motion.div>
+
               <motion.div
                ref={ref}
                 initial={{ opacity: 0, y: 50 }}
@@ -115,14 +139,55 @@ const HomePage = () => {
             <button
             style={{ display: "flex", alignItems: "center" }}
               className="button-main-two"
-              onClick={() => alert("Más información próximamente")}
+              onClick={opnenModal1}
               >
-              Ver Demo 
+              Ver Video
               <div className="play-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play-icon lucide-play"><polygon points="6 3 20 12 6 21 6 3"/></svg>
               </div>
-              
             </button>
+              
+              <AnimatePresence>
+                      {isModalOpen === "modal1" && (
+                        <motion.div
+                          className="modal-overlay-first"
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                        >
+                          <motion.div
+                            className="modal-box-first"
+                            initial={{ y: 50, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            exit={{ y: -50, opacity: 0 }}
+                          >
+                            <button
+                              className="close-button-first"
+                              onClick={() => setIsModalOpen(null)}
+                            >
+                              Cerrar
+                            </button>
+                            {/* Contenido del modal */}
+                            <div className="modal-content">
+                              <video  
+                              src={video}
+                               width="640"
+                               height="360"
+                               preload="metadata"
+                               autoPlay= "true"
+                               controls>
+
+
+                              </video>
+                             
+                            </div>
+                          </motion.div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+              
+
+          
 
               </motion.div>
           </div>
@@ -392,7 +457,7 @@ const HomePage = () => {
                         justifyContent: "center",
                         cursor: "pointer",
                       }}
-                      onClick={() => setIsModalOpen(true)}
+                      onClick={(opnenModal2)}
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -411,8 +476,9 @@ const HomePage = () => {
                         <path d="M22 16v6h-6" />
                       </svg>
                     </motion.button>
+
                     <AnimatePresence>
-                      {isModalOpen && (
+                      {isModalOpen === "modal2" && (
                         <motion.div
                           className="modal-overlay"
                           initial={{ opacity: 0 }}
@@ -427,7 +493,7 @@ const HomePage = () => {
                           >
                             <button
                               className="close-modal"
-                              onClick={() => setIsModalOpen(false)}
+                              onClick={() => setIsModalOpen(null)}
                             >
                               Cerrar
                             </button>
@@ -779,6 +845,7 @@ const HomePage = () => {
             . Todos los derechos reservados.
           </p>
         </footer>
+      
       </main>
     </>
   );

@@ -159,7 +159,7 @@ footer {
       font-size: 24px;
     box-shadow: 0px 5px black, 0px -5px black, 5px 0px black, -5px 0px black, 0px 10px #00000038, 5px 5px #00000038, -5px 5px #00000038, inset 0px 5px #ffffff1f, inset 0px -5px #00000030;
 }
-button {
+.button-game {
     text-transform: uppercase;
     display: flex;
     margin-right: 20px ;
@@ -173,7 +173,7 @@ button {
      box-shadow: 0px 5px black, 0px -5px black, 5px 0px black, -5px 0px black, 0px 10px #00000038, 5px 5px #00000038, -5px 5px #00000038, inset 0px 5px #ffffff36 ;
      cursor: pointer;
 }
- button:active {
+ .button-game:active {
      transform: translateY(5px);
      box-shadow: 0px 5px black, 0px -5px black, 5px 0px black, -5px 0px black,inset 0px 5px #00000038;
 }

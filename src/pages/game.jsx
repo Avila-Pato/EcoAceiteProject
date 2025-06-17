@@ -64,6 +64,7 @@ const GamePage = () => {
              
             <div class="container-button" >
                <button 
+               className= "button-game"
                 onClick={handleClick}
                 disabled={isCounter >= 100}
                 aria-label={`Aumentar puntos, actualmente ${isCounter}`}
