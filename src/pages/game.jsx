@@ -1,7 +1,39 @@
 import gota from "../assets/gota.png";
 import Navbar from "../components/navbar";
+import confetti from 'canvas-confetti';
+
+import { useState, useEffect } from "react";
 
 const GamePage = () => {
+  const [isCounter, setIsCounter] = useState(0);
+  const [goalReached, setGoalReached] = useState(false);
+  
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const GOALS = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+
+  useEffect(() => {
+    if (GOALS.includes(isCounter) && !goalReached) {
+      setGoalReached(true)
+      fireConfetti();
+      setTimeout(() => setGoalReached(false), 1000 )
+    }
+}, [isCounter, goalReached, GOALS]);
+
+
+  const fireConfetti = () => {
+    confetti({
+    particleCount: 100,
+    spread: 70,
+    origin: { y: 0.6, x: 0.5 },
+    colors: ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'],
+    })
+  }
+
+    const handleClick = () => {
+    setIsCounter(prev => Math.min(prev + 1, 100)); // No permite pasar de 100
+  };
+
   return (
     <>
       <Navbar />
@@ -14,18 +46,32 @@ const GamePage = () => {
         >
           <div className="juego-fondo">
             <article>
-              <p>Another day in the paradise of the oil recycling game.</p>
+              <p>Aventura de Reciclaje: Cuida el Planeta</p>
               <p className="parrafo">
-                The oil recycling game is a fun and educational experience that
-                helps you learn how to recycle oil and save the planet.
+                El juego de reciclaje de aceite es una experiencia divertida y
+                educativa que te ayuda a aprender cómo reciclar aceite y salvar
+                el planeta.
               </p>
+              {isCounter >= 0 && (
+                <p className="parrafo">
+                  {isCounter === 100 
+                    ? "¡Felicidades! Has alcanzado la meta máxima 🎉" 
+                    : ` Puntos: ${isCounter}  de 100 puntos`}
+                </p>
+              )}
             </article>
-
-            <div class="container-button">
-              <div class="pixel">
-                <p>Start</p>
-              </div>
+              {/* Button to start the game */}
              
+            <div class="container-button" >
+               <button 
+                onClick={handleClick}
+                disabled={isCounter >= 100}
+                aria-label={`Aumentar puntos, actualmente ${isCounter}`}
+              >
+                 <p className="parrafo">
+                  {isCounter === 100 ? "¡Has ganado!" : "Aumentar puntos!  "}
+                </p>
+              </button>
             </div>
           </div>
 

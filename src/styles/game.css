@@ -1,14 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
 @font-face {
-  font-family: 'Minecraftia';  /* Nombre que tú le das */
-  src: url('../fonts/Minecraftia-Regular.ttf') format('truetype');
+  font-family: "Minecraftia"; /* Nombre que tú le das */
+  src: url("../fonts/Minecraftia-Regular.ttf") format("truetype");
 }
 
-
-
-
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
@@ -17,7 +15,6 @@ html, body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  
 }
 
 /* Estilos para la estructura de la página de esta manera el footer se mantiene abajo */
@@ -35,7 +32,7 @@ html, body {
   justify-content: center;
   gap: 1rem;
   padding: 1rem;
-  background: url('../assets/sample.png') no-repeat center center / cover;
+  background: url("../assets/sample.png") no-repeat center center / cover;
   /* background: linear-gradient(135deg, #7f9b81, #a5d6a7); */
   padding: 32px;
   border-radius: 16px;
@@ -68,7 +65,6 @@ footer {
   }
 }
 
-
 /* Extra panel for desktop */
 .extra-panel {
   position: relative;
@@ -87,15 +83,33 @@ footer {
   padding: 24px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 121, 97, 0.2);
+  font-family: 'Minecraftia', sans-serif;
 }
 
+
+
 .juego-fondo {
-  font-family: 'Minecraftia', sans-serif;
+  font-family: "Minecraftia", sans-serif;
   color: white;
   font-weight: 600;
   font-size: 1.5rem;
   width: 60%;
+  padding: 1rem;
+
+  background:
+    linear-gradient(135deg, transparent 10px, rgba(46, 75, 104, 0.6) 0) top left,
+    linear-gradient(225deg, transparent 10px, rgba(46, 75, 104, 0.6) 0) top right,
+    linear-gradient(315deg, transparent 10px, rgba(46, 75, 104, 0.6) 0) bottom right,
+    linear-gradient(45deg, transparent 10px, rgba(46, 75, 104, 0.6) 0) bottom left,
+    radial-gradient(circle at 0 0, rgba(46, 75, 104, 0) 14px, rgba(46, 75, 104, 0.6) 15px),
+    radial-gradient(circle at 100% 0, rgba(46, 75, 104, 0) 14px, rgba(46, 75, 104, 0.6) 15px),
+    radial-gradient(circle at 100% 100%, rgba(46, 75, 104, 0) 14px, rgba(46, 75, 104, 0.6) 15px),
+    radial-gradient(circle at 0 100%, rgba(46, 75, 104, 0) 14px, rgba(46, 75, 104, 0.6) 15px);
+
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
 }
+
 .extra-panel h3 {
   font-weight: 900;
   font-size: 1.8rem;
@@ -104,73 +118,65 @@ footer {
   user-select: none;
 }
 
-/* Pixel button */
-.container-button {
-  margin: 50px;
-  text-align: center;
-}
+
 
 .pixel {
   font-size: 25px;
   color: white;
   height: auto;
   margin: 10px;
-  font-family: 'VT323';
-  
+  font-family: "VT323";
+
+  position: relative;
   display: inline-block;
   vertical-align: top;
   text-transform: uppercase;
-  
+
   cursor: pointer;
- 
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-
-
-.pixel {
-  line-height: 0;
-  
-  image-rendering: optimizeSpeed;
-  image-rendering: -moz-crisp-edges; /* Firefox */
-  image-rendering: -o-crisp-edges; /* Opera */
-  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
-  image-rendering: crisp-edges;
-  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
-  
-  border-style: solid;
-  border-width: 20px;
-  -moz-border-image: url(https://i.imgur.com/sREM8Yn.png) 20 stretch;
-  -webkit-border-image: url(https://i.imgur.com/sREM8Yn.png) 20 stretch;
-  -o-border-image: url(https://i.imgur.com/sREM8Yn.png) 20 stretch;
-  border-image: url(https://i.imgur.com/sREM8Yn.png) 20 stretch;
+.container{
+  width: 70%;
+  text-align: end;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-.pixel p {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  width: auto;
-  text-align: center;
-  margin: -20px -20px;
-  line-height: 20px;
-  padding: 10px 20px;
+.title {
   
-	background: #000000;
-	background:
-		linear-gradient(135deg, transparent 10px, #000000 0) top left,
-		linear-gradient(225deg, transparent 10px, #000000 0) top right,
-		linear-gradient(315deg, transparent 10px, #000000 0) bottom right,
-		linear-gradient(45deg,  transparent 10px, #000000 0) bottom left;
-	background-size: 50% 50%;
-	background-repeat: no-repeat;
-	background-image:
-		radial-gradient(circle at 0 0, rgba(204,0,0,0) 14px, #000000 15px),
-		radial-gradient(circle at 100% 0, rgba(204,0,0,0) 14px, #000000 15px),
-		radial-gradient(circle at 100% 100%, rgba(204,0,0,0) 14px, #000000 15px),
-		radial-gradient(circle at 0 100%, rgba(204,0,0,0) 14px, #000000 15px);
+    background: #2e2e2e;
+    padding: 15px;
+    color: #fff;
+    margin-bottom: 30px;
+  font-family: "Press Start 2P", system-ui;
+      font-size: 24px;
+    box-shadow: 0px 5px black, 0px -5px black, 5px 0px black, -5px 0px black, 0px 10px #00000038, 5px 5px #00000038, -5px 5px #00000038, inset 0px 5px #ffffff1f, inset 0px -5px #00000030;
 }
-
-
+button {
+    text-transform: uppercase;
+    display: flex;
+    margin-right: 20px ;
+     color: #fff;
+     background-color:red;
+     padding: 10px 20px ;
+     margin: 10px;
+     font-size: 14px;
+     font-family: "Minecraftia", sans-serif;
+     border: 0;
+     box-shadow: 0px 5px black, 0px -5px black, 5px 0px black, -5px 0px black, 0px 10px #00000038, 5px 5px #00000038, -5px 5px #00000038, inset 0px 5px #ffffff36 ;
+     cursor: pointer;
+}
+ button:active {
+     transform: translateY(5px);
+     box-shadow: 0px 5px black, 0px -5px black, 5px 0px black, -5px 0px black,inset 0px 5px #00000038;
+}
 
 
 .parrafo {
@@ -179,8 +185,7 @@ footer {
 
 .extra-panel p {
   margin-bottom: 18px;
-  font-family: 'Minecraftia', sans-serif;
-  
+  font-family: "Minecraftia", sans-serif;
 }
 
 footer {
@@ -195,16 +200,11 @@ footer {
   flex-shrink: 0;
 }
 
-
-
-
-
 @media (min-width: 768px) {
   main {
     grid-template-columns: 2fr 1fr;
   }
 }
-
 
 @keyframes fadeUp {
   0% {
@@ -238,11 +238,3 @@ footer {
     grid-template-columns: 2fr 1fr 1fr;
   }
 }
-
-
-
-
-
-
-
-

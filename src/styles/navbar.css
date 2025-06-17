@@ -15,11 +15,7 @@ nav.navbar {
   position: sticky;
   width: 100%;
 
-  background: linear-gradient(
-    135deg,
-    rgb(211, 239, 216) 0%,
-    /* rgb(123, 177, 144) 100% */
-    );
+  
 
   display: flex;
   z-index: 10;
