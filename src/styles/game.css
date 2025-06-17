@@ -1,21 +1,77 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
+@font-face {
+  font-family: 'Minecraftia';  /* Nombre que tú le das */
+  src: url('../fonts/Minecraftia-Regular.ttf') format('truetype');
+}
 
+
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
 
 .main-section {
+  flex: 1;
   display: flex;
-  justify-content: end;
-  flex-direction: row;
-  padding: 24px;
-  gap: 24px;
-  overflow-y: auto;
-  max-width: 1400px;
-  margin: 0 auto;
-  width: 100%;
+  flex-direction: column;
+  
 }
+
+/* Estilos para la estructura de la página de esta manera el footer se mantiene abajo */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.game-area {
+  flex: 1; /* Para que el contenido principal crezca y empuje el footer abajo */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: url('../assets/sample.png') no-repeat center center / cover;
+  /* background: linear-gradient(135deg, #7f9b81, #a5d6a7); */
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 121, 97, 0.3);
+}
+
+footer {
+  background: #003826;
+  color: #81c784;
+  text-align: center;
+  padding: 16px 24px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  user-select: none;
+  box-shadow: inset 0 2px 8px #004d40aa;
+}
+
+.gotita {
+  position: absolute;
+  top: 0;
+  right: 0;
+  animation: flotar 2s ease-in-out infinite alternate;
+}
+@keyframes flotar {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
 
 /* Extra panel for desktop */
 .extra-panel {
+  position: relative;
   background: #007961cc;
   border-radius: 24px;
   padding: 32px;
@@ -27,6 +83,18 @@
   flex-direction: column;
   justify-content: center;
   min-height: 480px;
+  border: 2px solid #007961;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 121, 97, 0.2);
+}
+
+.juego-fondo {
+  font-family: 'Minecraftia', sans-serif;
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
+  width: 60%;
 }
 .extra-panel h3 {
   font-weight: 900;
@@ -36,9 +104,83 @@
   user-select: none;
 }
 
+/* Pixel button */
+.container-button {
+  margin: 50px;
+  text-align: center;
+}
+
+.pixel {
+  font-size: 25px;
+  color: white;
+  height: auto;
+  margin: 10px;
+  font-family: 'VT323';
+  
+  display: inline-block;
+  vertical-align: top;
+  text-transform: uppercase;
+  
+  cursor: pointer;
+ 
+}
+
+
+
+.pixel {
+  line-height: 0;
+  
+  image-rendering: optimizeSpeed;
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -o-crisp-edges; /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+  
+  border-style: solid;
+  border-width: 20px;
+  -moz-border-image: url(https://i.imgur.com/sREM8Yn.png) 20 stretch;
+  -webkit-border-image: url(https://i.imgur.com/sREM8Yn.png) 20 stretch;
+  -o-border-image: url(https://i.imgur.com/sREM8Yn.png) 20 stretch;
+  border-image: url(https://i.imgur.com/sREM8Yn.png) 20 stretch;
+}
+
+.pixel p {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: auto;
+  text-align: center;
+  margin: -20px -20px;
+  line-height: 20px;
+  padding: 10px 20px;
+  
+	background: #000000;
+	background:
+		linear-gradient(135deg, transparent 10px, #000000 0) top left,
+		linear-gradient(225deg, transparent 10px, #000000 0) top right,
+		linear-gradient(315deg, transparent 10px, #000000 0) bottom right,
+		linear-gradient(45deg,  transparent 10px, #000000 0) bottom left;
+	background-size: 50% 50%;
+	background-repeat: no-repeat;
+	background-image:
+		radial-gradient(circle at 0 0, rgba(204,0,0,0) 14px, #000000 15px),
+		radial-gradient(circle at 100% 0, rgba(204,0,0,0) 14px, #000000 15px),
+		radial-gradient(circle at 100% 100%, rgba(204,0,0,0) 14px, #000000 15px),
+		radial-gradient(circle at 0 100%, rgba(204,0,0,0) 14px, #000000 15px);
+}
+
+
+
+
+.parrafo {
+  font-size: 1.2rem !important;
+}
 
 .extra-panel p {
   margin-bottom: 18px;
+  font-family: 'Minecraftia', sans-serif;
+  
 }
 
 footer {
@@ -53,13 +195,8 @@ footer {
   flex-shrink: 0;
 }
 
-.gotita {
-  position: absolute;
-}
 
-.juego-fondo {
-   margin-top: 40px;
-}
+
 
 
 @media (min-width: 768px) {

@@ -96,13 +96,35 @@ const HomePage = () => {
                 </p>
               </motion.div>
             </div>
+              <motion.div
+               ref={ref}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.5 }}
+               style={{ display: "flex", gap: "1rem" }}>
 
             <button
               className="button-main"
               onClick={() => alert("Más información próximamente")}
-            >
+              >
               Más información
             </button>
+
+
+            <button
+            style={{ display: "flex", alignItems: "center" }}
+              className="button-main-two"
+              onClick={() => alert("Más información próximamente")}
+              >
+              Ver Demo 
+              <div className="play-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play-icon lucide-play"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+              </div>
+              
+            </button>
+
+              </motion.div>
           </div>
         </section>
         {/* Silder de abajo */}
@@ -474,7 +496,6 @@ const HomePage = () => {
                           borderRadius: "50%",
                           overflow: "hidden",
                           objectFit: "cover",
-                          marginTop: "10px",
                           width: "50px",
                           height: "50px",
                           // transition:  "transform 300ms ease-in-out",
@@ -486,8 +507,10 @@ const HomePage = () => {
                     style={{
                       width: "100%",
                       maxWidth: "550px",
-                      marginTop: "1rem",
-                    }}
+                      height: "auto",
+                      borderRadius: "10px",
+                      overflow: "hidden",
+                      marginTop: "10px",}}
                   >
                     <img
                       src={oil3}
@@ -515,7 +538,7 @@ const HomePage = () => {
                   >
                     <p>
                       Me hace reflexionar sobre el reciclaje profundamente. 
-                      este articulo ,tomé la decisión de nunca más desechar el aceite
+                      este articulo,tomé la decisión de nunca más desechar el aceite
                       usado por el desagüe. Ahora procuro reciclarlo, porque
                       considero que es un pequeño gesto que contribuye al
                       cuidado del medio ambiente
