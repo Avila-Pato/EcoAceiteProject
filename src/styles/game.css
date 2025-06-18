@@ -56,6 +56,7 @@ footer {
   right: 0;
   animation: flotar 2s ease-in-out infinite alternate;
 }
+
 @keyframes flotar {
   from {
     transform: translateY(0);

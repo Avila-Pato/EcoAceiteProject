@@ -68,7 +68,7 @@ const HomePage = () => {
               objectFit: "cover",
             }}
             />
-          <div className="texto-main" style={{ marginTop: "2rem" }}>
+          <div className="texto-main" style={{ marginTop: "2rem" }}>   
             <motion.h1
               className="popa1"
               style={{ marginBottom: "1rem", fontSize: "2rem" }}
@@ -542,7 +542,7 @@ const HomePage = () => {
                 <div style={{}}>
                   <div
                     style={{
-                      backgroundColor: "rgb(215,230,190)",
+                      backgroundColor: "rgb(225, 222, 216)",
                       borderRadius: "10px",
                       padding: "10px",
                     }}
@@ -642,6 +642,7 @@ const HomePage = () => {
                 textAlign: "center",
                 marginBottom: "2rem",
                 fontSize: "1.8rem",
+                color: "#00796b",
               }}
             >
               ¿Cómo reciclar tu aceite usado?

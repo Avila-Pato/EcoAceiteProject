@@ -27,11 +27,12 @@
       position: relative;
 }
 
+
 .imagen-main {
    position: absolute;
    display: flex;
    justify-content:start;
-  top: 50%;
+  top: 0%;
   right: -5%;
   /* transform: translate(10%, -70%); */
   padding: 2rem;
@@ -39,7 +40,18 @@
   height: auto;
   max-width: 100px;
   gap: 1rem;
-  margin-top: 2rem;
+  margin-top: 0rem;
+  animation: flotar 2s ease-in-out infinite alternate;
+}
+
+
+@keyframes flotar {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
 }
 
 .texto-main {
