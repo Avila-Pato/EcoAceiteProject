@@ -134,30 +134,34 @@ const GamePage = () => {
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-orbit-icon lucide-orbit"><path d="M20.341 6.484A10 10 0 0 1 10.266 21.85"/><path d="M3.659 17.516A10 10 0 0 1 13.74 2.152"/><circle cx="12" cy="12" r="3"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/></svg>
                 </div>                  
                 
-                <div>
-                  <h4>
-                  Decrease Carbon
-                  </h4> 
-                  <p>
-                    We aim to reduce carbon emissions by recycling used cooking oil, contributing to a cleaner environment.
-                  </p>
-                </div>
-                 <div>
-                 <h4>
-                  Decrease Carbon
-                  </h4> 
-                  <p>
-                    We aim to reduce carbon emissions by recycling used cooking oil, contributing to a cleaner environment.
-                  </p>
-                </div>
-                 <div>
-                  <h4>
-                  Decrease Carbon
-                  </h4> 
-                  <p>
-                    We aim to reduce carbon emissions by recycling used cooking oil, contributing to a cleaner environment.
-                  </p>
-                </div>
+               <div>
+  <h4>
+    Disminuir el carbono
+  </h4> 
+  <p>
+    Buscamos reducir las emisiones de carbono reciclando el aceite de cocina usado, contribuyendo a un entorno más limpio.
+  </p>
+</div>
+
+<div>
+  <h4>
+    Proteger la naturaleza
+  </h4> 
+  <p>
+    Promovemos el reciclaje de aceite para evitar la contaminación de suelos y ríos, cuidando la flora y fauna.
+  </p>
+</div>
+
+<div>
+  <h4>
+    Fomentar el reciclaje
+  </h4> 
+  <p>
+    Impulsamos la reutilización responsable del aceite usado para crear nuevos productos y reducir residuos.
+  </p>
+</div>
+
+
               </div>
 
 

@@ -41,7 +41,6 @@ ul {
 .game-button {
   font-weight: bold;
   font-size: 1.1rem;
-  padding: 10px 20px;
   background: linear-gradient(to bottom, #ffcc00, #cc9900);
   border: 3px solid #663300;
   border-radius: 8px;
@@ -53,7 +52,6 @@ ul {
 .home-button {
   font-weight: bold;
   font-size: 1.05rem;
-  padding: 10px 18px;
   background: linear-gradient(to bottom right, #a8e6cf, #6fcd85);
   border: 2px solid #388e3c;
   color: #2e7d32;
