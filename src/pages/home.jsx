@@ -10,6 +10,8 @@ import recyceContainer from "../assets/mainImage/3.jpeg"
 import oil from "../assets/oil.jpg"; // Import your vector image
 import oil2 from "../assets/oil2.jpg";
 import oil3 from "../assets/oil3.jpg";
+import bidones from "../assets/bidones.png";
+
 import recycle from "../assets/recycle.png";
 import aceiteCocina from "../assets/aceiteCocina.png";
 
@@ -537,8 +539,8 @@ const HomePage = () => {
                 style={{
                   gridColumn: "span 2",
                   display: "grid",
-                  gridTemplateColumns: "1fr",
-                }}
+                  gridTemplateColumns: "repeat(1, 1fr)",
+                  gap: "1rem",}}
               >
                 <div style={{}}>
                   <div
@@ -583,10 +585,9 @@ const HomePage = () => {
                     }}
                   >
                     <img
-                      src={oil3}
-                      alt=""
+                      src={bidones}
+                      width={500}
                       style={{
-                        width: "100%",
                         maxWidth: "100%",
                         height: "auto",
                         display: "block",
@@ -603,7 +604,6 @@ const HomePage = () => {
                       backgroundColor: "rgb(215,230,190)",
                       borderRadius: "10px",
                       padding: "10px",
-                       marginBottom: "30px",
                     }}
                   >
                     <p>
