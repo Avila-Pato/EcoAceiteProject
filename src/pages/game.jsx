@@ -5,7 +5,7 @@ import confetti from 'canvas-confetti';
 
 import { useState, useEffect } from "react";
 
-
+// hola que hace
 
 const GamePage = () => {
   const [isCounter, setIsCounter] = useState(0);
