@@ -66,6 +66,8 @@ const GamePage = () => {
             {/* Button to start the game */}
 
             <div class="container-button" >
+             
+
               <button
                 className="button-game"
                 onClick={handleClick}
