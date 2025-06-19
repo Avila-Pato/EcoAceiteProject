@@ -10,6 +10,8 @@ import recyceContainer from "../assets/mainImage/3.jpeg"
 import oil from "../assets/oil.jpg"; // Import your vector image
 import oil2 from "../assets/oil2.jpg";
 import oil3 from "../assets/oil3.jpg";
+import bidones from "../assets/bidones.png";
+
 import recycle from "../assets/recycle.png";
 import aceiteCocina from "../assets/aceiteCocina.png";
 
@@ -71,7 +73,7 @@ const HomePage = () => {
           <div className="texto-main" style={{ marginTop: "2rem" }}>   
             <motion.h1
               className="popa1"
-              style={{ marginBottom: "1rem", fontSize: "2rem" }}
+              style={{ marginBottom: "2rem", fontSize: "2rem", fontWeight: "bold", color: "#28a745" }}
               ref={ref}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -117,9 +119,9 @@ const HomePage = () => {
         transition={{ duration: 0.8, ease: "easeIn" }}
         viewport={{ once: true, amount: 0.5 }}
         className="imagen-main" >
-          <img src={mainPerson} alt="" width={200} height={300}  style={{ borderRadius: "30px", marginTop: "3rem" }}   />
-                    <img src={mainPerson2} alt="" width={200} height={300} style={{ borderRadius: "30px" }} />
-          <img src={recyceContainer} alt="" width={200} height={300}  style={{ borderRadius: "30px", marginTop: "2rem" }}/>
+          <img src={mainPerson} alt="" width={230} height={400}  style={{ borderRadius: "30px", marginTop: "3rem" }}   />
+          <img src={mainPerson2} alt="" width={230} height={400} style={{ borderRadius: "30px" }} />
+          <img src={recyceContainer} alt="" width={230} height={400}  style={{ borderRadius: "30px", marginTop: "2rem" }}/>
         </motion.div>
 
               <motion.div
@@ -228,11 +230,11 @@ const HomePage = () => {
           <img src={fondo2} alt="fondo imagen" />
         </div> */}
 
-        <section className="home-page" style={{}}>
-          <article className="home-article">
+        <section className="home-page">
+          <article className="home-article" >
             <div
               className="home-article-content"
-              style={{ position: "relative" }}
+              style={{ position: "relative",  }}
             >
               <ul
                 className="home-list"
@@ -300,23 +302,24 @@ const HomePage = () => {
               </ul>
             </div>
             {/* CONTENIDO DE TEXTO */}
-            <div className="home-text">
+            <div className="home-text" >
               <section
                 className="home-main-text"
                 style={{
                   textAlign: "center",
-                  marginBottom: "10rem",
+                  marginBottom: "3rem",
                   maxWidth: "fit-content",
+                  
                 }}
+              
               >
-                <h2 style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>
+                <h2 style={{ fontSize: "2rem", }}>
                   Marcas que se suman al cambio
                 </h2>
                 <p
                   style={{
                     fontSize: "1.125rem",
                     color: "#333",
-                    marginBottom: "1rem",
                   }}
                 >
                   Sé parte del cambio: descubre cómo el reciclaje de aceite
@@ -371,7 +374,7 @@ const HomePage = () => {
                   src={oil}
                   alt="fondo vector"
                   width={300}
-                  height={500}
+                  height={570}
                   style={{ objectFit: "cover" }}
                 />
               </div>
@@ -536,8 +539,8 @@ const HomePage = () => {
                 style={{
                   gridColumn: "span 2",
                   display: "grid",
-                  gridTemplateColumns: "1fr",
-                }}
+                  gridTemplateColumns: "repeat(1, 1fr)",
+                  gap: "1rem",}}
               >
                 <div style={{}}>
                   <div
@@ -578,13 +581,13 @@ const HomePage = () => {
                       height: "auto",
                       borderRadius: "10px",
                       overflow: "hidden",
-                      marginTop: "10px",}}
+                      marginTop: "10px",
+                    }}
                   >
                     <img
-                      src={oil3}
-                      alt=""
+                      src={bidones}
+                      width={500}
                       style={{
-                        width: "100%",
                         maxWidth: "100%",
                         height: "auto",
                         display: "block",
@@ -601,7 +604,6 @@ const HomePage = () => {
                       backgroundColor: "rgb(215,230,190)",
                       borderRadius: "10px",
                       padding: "10px",
-                      marginBottom: "5rem",
                     }}
                   >
                     <p>
@@ -621,7 +623,6 @@ const HomePage = () => {
                           borderRadius: "50%",
                           overflow: "hidden",
                           objectFit: "cover",
-                          marginTop: "10px",
                           width: "50px",
                           height: "50px",
                           // transition:  "transform 300ms ease-in-out",
